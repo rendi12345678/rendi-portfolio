@@ -1,0 +1,10 @@
+:root {
+  font-size: 62.5%;
+  --dark-clr: #121212;
+  text-size-adjust: none;
+}
+
+body {
+  font-family: helvetica, Sans-Serif;
+}
+
