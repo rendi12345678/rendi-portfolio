@@ -1,6 +1,8 @@
 section.projects {
-  margin-top: 5.5rem;
-  padding: 4rem 2rem;
+  margin: 5.5rem clamp(2rem, 4svw, 4rem);
+  padding: 4rem 0;
+  box-sizing: border-box;
+  max-width: 92rem;
 }
 
 section.projects h2 {

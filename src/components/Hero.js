@@ -1,16 +1,11 @@
 import React from 'react';
 import '../styles/reset.css';
-import facebookImage from '../img/1024px-2021_Facebook_icon.svg.png';
-import rendiImage from '../img/rendi.jpg';
-import githubImage from '../img/GitHub-Mark.png';
-import whatsappImage from '../img/479px-WhatsApp_icon.png';
 
 const Hero = () => { 
   
   const scrollToContactSection = () => {
     const element = document.getElementById('contact-section');
     
-    // Jika element ada maka scroll
     if(element) {
       element.scrollIntoView({behavior: 'smooth'});
     }
@@ -29,7 +24,7 @@ const Hero = () => {
                  onClick={scrollToContactSection}>Contact Me</button>
        </div>
        <figure className="hero-image">
-           <img src={rendiImage} 
+           <img src="/img/rendi.jpg" 
                 alt="Hero Image" 
                 title="hero-image"/>
        </figure>

@@ -1,12 +1,11 @@
 import React from 'react';
-import rendiImage from '../img/rendi.jpg';
 import '../styles/about.css';
 import '../styles/reset.css';
 
 const About = () => {
   return (
     <section className="about-section" id="about-section">
-      <img src={rendiImage} 
+      <img src="/img/rendi.jpg" 
            alt="About Image"
            title="About Image"/>
       <div className="text-container">

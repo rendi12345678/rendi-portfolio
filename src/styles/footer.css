@@ -2,6 +2,8 @@
   width: 100vw;
   margin: 0 calc(-50vw - -50%); 
   background-color: #333;
+  padding: 0 clamp(2rem, 4svw, 4rem);
+  box-sizing: border-box;
 }
 
 .footer div {
