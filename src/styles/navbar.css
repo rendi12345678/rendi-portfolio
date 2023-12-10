@@ -2,7 +2,6 @@ header {
   --font-clr: #777;
   position: fixed;
   top: 0;
-  padding: 0 clamp(2rem, 4svw, 4rem);
   left: 0;
   right: 0;
   height: 5.5rem;
@@ -13,6 +12,7 @@ header {
 }
 
 header .nav-container {
+padding: 0 clamp(2rem, 4svw, 4rem);
   display: flex;
   width: 100%;
   position: relative;
@@ -101,7 +101,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: clamp(20rem, 30vw, 30rem);
+  width: clamp(23rem, 30vw, 30rem);
 }
 
 ul li {
@@ -131,7 +131,7 @@ ul li a:hover::after {
   width: 100%;
 }
 
-@media (width <= 768px) {
+@media (width <= 500px) {
   nav ul {
     display: flex;
     position: absolute;

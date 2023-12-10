@@ -3,6 +3,7 @@
   margin-bottom: 4rem 0;
   padding: 4rem;
   box-sizing: border-box;
+  margin-top: var(--margin-top-size);
   max-width: 92rem;
 }
 

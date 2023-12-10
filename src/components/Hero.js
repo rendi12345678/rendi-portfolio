@@ -16,7 +16,7 @@ const Hero = () => {
        <div class="hero-container">
          <div className="hero-text">
          <h1>HI I AM <span>RENDI</span></h1>
-         <h2>I am a Fullstack Developer</h2>
+         <h3>I am a Fullstack Developer</h3>
          <p>
            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ullam repudiandae, expedita, dolor.
          </p>

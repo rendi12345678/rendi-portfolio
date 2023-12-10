@@ -3,9 +3,16 @@
   --paragraph-size2: clamp(1.4rem, 1.6vw, 1.6rem);
   --h2-size: calc(var(--paragraph-size) * 1.2 * 1.2 * 1.2 * 1.2);
   --h1-size: calc(var(--paragraph-size) * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2);
-  --h3-size: calc(var(--paragraph-size) * 1.2 * 1.2);
   font-size: 62.5%;
+  --margin-top-size: 2.5rem;
+  --h3-size: calc(var(--paragraph-size) * 1.2 * 1.2);
   --navbar-title-size: calc(var(--paragraph-size) * 1.2 * 1.2);
+  @media (width <= 756px) {
+    --navbar-title-size: calc(var(--paragraph-size) * 1.2);
+    --h2-size: calc(var(--paragraph-size) * 1.2 * 1.2 * 1.2);
+    --h1-size: calc(var(--paragraph-size) * 1.2 * 1.2 * 1.2 * 1.2);
+    --h3-size: calc(var(--paragraph-size) * 1.2);
+  }
 }
 
 body {
@@ -26,6 +33,3 @@ body {
   padding: 0 clamp(2rem, 4svw, 4rem);
   width: 100%;
 }
-
-
-
