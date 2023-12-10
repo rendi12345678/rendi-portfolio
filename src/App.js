@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import './styles/reset.css';
 import './styles/navbar.css';
 import './styles/body.css';
-import Hero from './components/Hero';
 import './styles/hero.css';
 import Home from './Pages/Home';
 import './App.css';

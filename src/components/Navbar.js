@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../styles/reset.css";
-import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
@@ -17,9 +16,9 @@ const Navbar = () => {
   return (
     <header id="navbar">
       <div className="nav-container">
-        <h2>
+        <h3>
           Rendi's <span>Portfolio</span>
-        </h2>
+        </h3>
         <nav>
           <ul className={isChecked ? "slide" : ""}>
             <li>

@@ -8,6 +8,7 @@
   box-sizing: border-box;
   display: grid;
   padding: 0 clamp(2rem, 4svw, 4rem);
+  justify-content: center;
   align-items: center;
 }
 

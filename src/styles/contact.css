@@ -7,18 +7,14 @@
   max-width: 92rem;
 }
 
-.contact-section h1 {
+.contact-section h2 {
   font-size: var(--h2-size);
   line-height: calc(var(--h2-size) + .8rem);
   font-weight: bold;
   color: #444;
   text-align: center;
   line-height: 1.1;
-  margin-bottom: .5rem;
-}
-
-.contact-section h1 span {
-  color: #0047AB;
+  margin-bottom: 2rem;
 }
 
 .contact-list {
@@ -40,7 +36,7 @@
   align-items: center;
 }
 
-.contact-list figure img {
+.contact-section .contact-list figure img {
   width: 3rem;
   height: 3rem;
   padding: 1.5rem;

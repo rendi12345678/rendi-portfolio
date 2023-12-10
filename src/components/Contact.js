@@ -5,20 +5,20 @@ import "../styles/contact.css";
 const Contact = () => {
   return (
     <section className="contact-section" id="contact-section">
-      <h1>
+      <h2>
         Contact <span>Me</span>
-      </h1>
+      </h2>
       <div className="contact-list">
         <figure class="email">
-          <img src="/img/email.png" alt="" />
+          <img src="/img/email.png" alt="email" />
           <figcaption>hardleberg@gmail.com</figcaption>
         </figure>
         <figure className="location">
-          <img src="/img/location.png" alt="" />
+          <img src="/img/location.png" alt="location" />
           <figcaption>Jombang, East Java, Indonesia</figcaption>
         </figure>
         <figure className="phone-number">
-          <img src="/img/telephone.png" alt="" />
+          <img src="/img/telephone.png" alt="telephone" />
           <figcaption>+6285733300369</figcaption>
         </figure>
       </div>

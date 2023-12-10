@@ -84,14 +84,15 @@ header .nav-container {
 }
 
 
-header h2 {
+header .nav-container h3 {
   font-size: var(--navbar-title-size);
   line-height: 1.1;
   color: #555;
+  margin: 0;
   font-weight: bold;
 }
 
-header h2 span {
+header h3 span {
   color: #0047AB;
 }
 

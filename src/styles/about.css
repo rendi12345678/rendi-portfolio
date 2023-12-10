@@ -73,7 +73,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
   gap: clamp(2rem, 4svw, 4rem);
-  width: clamp(14rem, 20svw, 20rem);
+  margin-top: 1rem;
+  width: clamp(14rem, 19svw, 19rem);
 }
 
 .list-of-social-media figure img {
