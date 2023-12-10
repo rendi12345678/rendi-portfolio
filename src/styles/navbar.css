@@ -9,17 +9,19 @@ header {
   color: var(--font-clr);
   z-index: 99999;
   box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .15);
+  display: flex;
+  justify-content: center;
+  padding: 0 clamp(2rem, 4svw, 4rem);
 }
 
 header .nav-container {
-padding: 0 clamp(2rem, 4svw, 4rem);
+  flex-grow: 1;
   display: flex;
   width: 100%;
   position: relative;
   top: 0;
   right: 0;
   height: 100%;
-  margin: auto;
   left: 0;
   bottom: 0;
   background: #fff;
@@ -27,6 +29,7 @@ padding: 0 clamp(2rem, 4svw, 4rem);
   align-items: center;
   box-sizing: border-box;
   max-width: 92rem;
+  z-index: -999999;
 }
 
 /* Hamburger Menu */
@@ -134,7 +137,7 @@ ul li a:hover::after {
 @media (width <= 500px) {
   nav ul {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
