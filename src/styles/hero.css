@@ -3,7 +3,7 @@
   background-color: #fff;
   width: 100svw;
   height: 100svh;
-  margin: 5.5rem calc(-50svw - -50%);
+  margin: 0 calc(-50svw - -50%);
   margin-bottom: 0;
   box-sizing: border-box;
   display: grid;
