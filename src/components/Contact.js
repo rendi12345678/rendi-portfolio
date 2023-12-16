@@ -5,9 +5,10 @@ import "../styles/contact.css";
 const Contact = () => {
   return (
     <section className="contact-section" id="contact-section">
-      <h2>
-        Contact <span>Me</span>
-      </h2>
+      <div className="contact-title">
+        <h2>Contact Me</h2>
+        <p>Reach me at</p>
+      </div>
       <div className="contact-list">
         <figure class="email">
           <img src="/img/email.png" alt="email" />

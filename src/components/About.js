@@ -12,10 +12,7 @@ const About = () => {
       <img src="/img/rendi.jpg" alt="About Image" title="About Image" />
       <div className="texts">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. eligendi
-          ducimus mollitia similique, expedita saepe Lorem ipsum dolor sit amet,
-          consecteur adipisicing elit. Cupiditate, quod, quisquam. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Tenetur, quae, velit.
+        With a blend of creativity and precision, I embark on a journey to bridge the gap between design and functionality. My expertise lies in transforming ideas into interactive realities, and I thrive on the challenges of the ever-evolving digital landscape.
         </p>
         <h3>Find Me on Social Media</h3>
         <div className="list-of-social-media">

@@ -21,8 +21,8 @@ const Project = () => {
           <div>
             <h3>Typing Test Game</h3>
             <figcaption>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium dolorem animi provident voluptatem temporibus.
+              This is my open source project that allows user to login / sign up, practice typing, and also with leaderboard feature
+              to allows user see their ranking.
             </figcaption>
             <div>
               <button className="view-code-btn">Github Code</button>
@@ -39,8 +39,7 @@ const Project = () => {
           <div>
             <h3>Online Shop</h3>
             <figcaption>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium dolorem animi provident voluptatem temporibus.
+              This is my own project that allows user to see all products from database by certain category, and allows to see shopping cart.
             </figcaption>
             <div>
               <button className="view-code-btn">Github Code</button>
@@ -49,9 +48,9 @@ const Project = () => {
           </div>
         </figure>
       </div>
-      <HashLink className="show-all-btn" smooth to="/projects/#projects">
+      {/* <HashLink className="show-all-btn" smooth to="/projects/#projects">
         Show All
-      </HashLink>
+      </HashLink> */}
     </section>
   );
 };
