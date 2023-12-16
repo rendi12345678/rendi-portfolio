@@ -1,10 +1,12 @@
 import React from "react";
 import "../styles/reset.css";
 import "../styles/project.css";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 
 const Project = () => {
+  const movePage = (url) => {
+    window.location.href = url;
+  }
+
   return (
     <section className="project-section" id="project-section">
       <div className="project-title">
@@ -25,8 +27,8 @@ const Project = () => {
               to allows user see their ranking.
             </figcaption>
             <div>
-              <button className="view-code-btn">Github Code</button>
-              <button className="demo-btn">Demo</button>
+              <button className="view-code-btn" onClick={() => movePage("https://github.com/rendi12345678/eletypes-frontend-open-source")}>Github Code</button>
+              <button className="demo-btn" onClick={() => movePage("https://eletype-ac448.web.app/")}>Demo</button>
             </div>
           </div>
         </figure>
