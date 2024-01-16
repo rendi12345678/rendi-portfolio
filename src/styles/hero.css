@@ -8,7 +8,8 @@
   box-sizing: border-box;
   display: grid;
   padding: 0 clamp(2rem, 4svw, 4rem);
-  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
   align-items: center;
 }
 
@@ -53,12 +54,12 @@
   width: 100%;
   width: clamp(15rem, 35svw, 35rem);
   height: clamp(15rem, 35svw, 35rem);
-  background: url(/public/img/rendi.jpeg) center -13rem / 80% no-repeat;
-  border: .1rem solid #444;
+  background: url(/public/img/rendi.jpeg) center 50% / 80% no-repeat;
+  border: 0.1rem solid #444;
 }
 
 .contact-btn {
-  background-color: #0047AB;
+  background-color: #0047ab;
   color: #fff;
   border: 0;
   margin-top: 2rem;
@@ -84,39 +85,52 @@
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     transition: 3000ms;
   }
-  
+
   50% {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     transition: 3000ms;
   }
-  
+
   100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
 }
 
-@media (width <= 500px) {
+@media (width < 768px) {
   .hero-section .hero-container {
     min-height: 100svh;
     grid-template-columns: 1fr;
     row-gap: 2rem;
+    width: 100%;
     text-align: left;
     align-content: center;
     box-sizing: border-box;
   }
-  
+
+  .hero-section p {
+    max-width: 80ch;
+  }
+
   .hero-image {
     order: 1;
     justify-content: center;
   }
-  
-  .hero-image img {
-    width: 25rem;
-    height: 25rem;
+
+  .hero-image div {
+    width: clamp(30rem, 35svw, 35rem);
+    height: clamp(30rem, 35svw, 35rem);
     margin-bottom: 2rem;
   }
   
   .hero-text {
     order: 2;
+  }
+}
+
+@media (width < 576px) {
+  .hero-image div {
+    width: clamp(24rem, 35svw, 35rem);
+    height: clamp(24rem, 35svw, 35rem);
+    margin-bottom: 2rem;
   }
 }

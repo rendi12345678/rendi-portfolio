@@ -10,7 +10,7 @@ const Contact = () => {
         <p>Let's call me now</p>
       </div>
       <div className="contact-list">
-        <figure class="email">
+        <figure className="email">
           <img src="/img/email.png" alt="email" />
           <figcaption>hardleberg@gmail.com</figcaption>
         </figure>

@@ -52,7 +52,6 @@
 
 .texts h3 {
   font-size: var(--h3-size);
-  margin-bottom: .5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
   line-height: 1;
@@ -81,7 +80,7 @@
   z-index: 9999;
 }
 
-@media (width <= 500px) {
+@media (width < 768px) {
   .about-section {
     grid: 
       "title title" auto
@@ -97,6 +96,11 @@
     min-width: 25rem;
     justify-self: center;
   }
+
+  .texts h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
   
   .about-section .texts {
     margin-top: 2rem;
@@ -106,6 +110,7 @@
 
   .about-section .list-of-social-media {
     justify-self: center;
+    margin-top: 0;
   }
 
   .about-section .list-of-social-media img {
