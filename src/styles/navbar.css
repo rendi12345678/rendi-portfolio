@@ -1,5 +1,5 @@
 header {
-  --font-clr: #777;
+  --font-clr: #444;
   position: fixed;
   top: 0;
   left: 0;
@@ -87,7 +87,6 @@ header .nav-container {
 header .nav-container h3 {
   font-size: var(--navbar-title-size);
   line-height: 1.1;
-  color: #555;
   margin: 0;
   font-weight: bold;
 }

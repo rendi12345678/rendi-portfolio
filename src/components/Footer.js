@@ -7,7 +7,7 @@ const Footer = () => {
     <section className="footer">
     <div>
       <p>
-        Copyright 2023. By Rendi Virgantara Setiawan
+        Copyright 2024. By Rendi Virgantara Setiawan
       </p>
     </div>
     </section>

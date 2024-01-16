@@ -5,54 +5,59 @@ import "../styles/project.css";
 const Project = () => {
   const movePage = (url) => {
     window.location.href = url;
-  }
+  };
+
+  const showProject = ({ imageUrl, title, demoLink, description }) => {
+    return (
+      <>
+        <figure className="project">
+          <img src={imageUrl} alt="Project" title="Project" />
+          <div>
+            <h3>{title}</h3>
+            <p>Demo : <a href={demoLink}>{demoLink}</a></p>
+            <figcaption>{description}</figcaption>
+          </div>
+        </figure>
+      </>
+    );
+  };
+
+  // My projects
+  const typingTestGame = {
+    imageUrl: "/img/eletype1.png",
+    title: "Open Source Typing Test Game",
+    demoLink: "https://eletype-ac448.web.app",
+    description:
+      "This is my project from open-source that allows users to log in / sign up, practice typing, and also includes a leaderboard feature that enables users to see their rankings. Built with the MERN stack.",
+  };
+
+  const onlineBookStore = {
+    imageUrl: "/img/book-store.png",
+    title: "Online Book Store",
+    demoLink: "https://ilham-store.web.app",
+    description:
+      "This is my personal project for a book store that enables users to browse all available books, manage their shopping cart, and seamlessly purchase books via WhatsApp. Built with the MERN stack.",
+  };
+
+  const nannyLandingPage = {
+    imageUrl: "/img/nanny-landing-page.png",
+    title: "Nanny's Landing Page",
+    demoLink: "https://ningsih-nanny.web.app",
+    description:
+      "This is my personal project, a nanny services landing page built with React.js. The platform offers a user-friendly interface for families to discover and connect with experienced nannies, showcasing essential information such as profiles and contact details.",
+  };
 
   return (
     <section className="project-section" id="project-section">
-      <div className="project-title">
-        <h1>Portfolio</h1>
+      <div className="section-title">
+        <h2>Portfolio</h2>
         <p>My projects</p>
       </div>
       <div className="project-list">
-        <figure className="project">
-          <img
-            src="/img/eletype.png"
-            alt="Project Image"
-            title="Project Image"
-          />
-          <div>
-            <h3>Typing Test Game</h3>
-            <figcaption>
-              This is my open source project that allows user to login / sign up, practice typing, and also with leaderboard feature
-              to allows user see their ranking.
-            </figcaption>
-            <div>
-              <button className="view-code-btn" onClick={() => movePage("https://github.com/rendi12345678/eletypes-frontend-open-source")}>Github Code</button>
-              <button className="demo-btn" onClick={() => movePage("https://eletype-ac448.web.app/")}>Demo</button>
-            </div>
-          </div>
-        </figure>
-        <figure className="project">
-          <img
-            src="/img/e1.png"
-            alt="Project Image"
-            title="Project Image"
-          />
-          <div>
-            <h3>Online Shop</h3>
-            <figcaption>
-              This is my own project that allows user to see all products from database by certain category, and allows to see shopping cart.
-            </figcaption>
-            <div>
-              <button className="view-code-btn">Github Code</button>
-              <button className="demo-btn">Demo</button>
-            </div>
-          </div>
-        </figure>
+        {showProject(typingTestGame)}
+        {showProject(onlineBookStore)}
+        {showProject(nannyLandingPage)}
       </div>
-      {/* <HashLink className="show-all-btn" smooth to="/projects/#projects">
-        Show All
-      </HashLink> */}
     </section>
   );
 };

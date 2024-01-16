@@ -23,17 +23,16 @@
 .about-title h2 {
   font-size: var(--h2-size);
   line-height: 1;
-  margin-bottom: .5rem;
+  margin-bottom: .2rem;
   font-weight: bold;
   align-self: end;
-  color: #444;
 }
 
 .about-title p {
-  margin-bottom: .5rem;
+  margin-top: 0;
   font-size: var(--paragraph-size);
   line-height: 1.5;
-  color: #777;
+  color: #0047AB;
 }
 
 .about-section img {
@@ -58,11 +57,9 @@
   margin-bottom: 1rem;
   line-height: 1;
   font-weight: bold;
-  color: #555;
 }
 
 .texts p {
-  color: #777;
   font-size: var(--paragraph-size);
   line-height: 1.5;
   max-width: 75ch;

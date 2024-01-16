@@ -2,6 +2,7 @@
   width: 100vw;
   margin: 0 calc(-50vw - -50%); 
   background-color: #333;
+  margin-top: var(--margin-top-size);
   padding: 0 clamp(2rem, 4svw, 4rem);
   box-sizing: border-box;
 }
@@ -13,19 +14,14 @@
   align-items: center;
   max-width: 80rem;
   justify-items: center;
-  color: #686868;
   padding: 1.5rem 4rem;
 }
 
-.footer h2 span {
-  color: #0047AB;
-}
-
 .footer p {
-  color: #eee;
   font-size: var(--paragraph-size);
   line-height: 1.5;
   justify-self: center;
+  color: #eee;
 }
 
 .social-media {

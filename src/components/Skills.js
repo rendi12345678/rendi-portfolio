@@ -5,7 +5,7 @@ import '../styles/reset.css';
 const Skills = () => {
   return (
       <section className="skills">
-        <div className="skill-title">
+        <div className="section-title">
         <h2>Skills</h2>
         <p>My technical level</p>
         </div>

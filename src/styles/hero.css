@@ -27,7 +27,6 @@
   line-height: 1;
   margin-bottom: 2rem;
   font-weight: bold;
-  color: #333;
 }
 
 .hero-section h3 {
@@ -35,15 +34,12 @@
   margin-bottom: 1rem;
   line-height: 1;
   font-weight: bold;
-  color: #555;
 }
 
 .hero-section p {
-  margin-bottom: 1rem;
   font-size: var(--paragraph-size);
   line-height: 1.5;
   max-width: 50ch;
-  color: #777;
 }
 
 .hero-image {
@@ -52,12 +48,13 @@
   align-items: center;
 }
 
-.hero-image img {
+.hero-image div {
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   width: 100%;
   width: clamp(15rem, 35svw, 35rem);
   height: clamp(15rem, 35svw, 35rem);
-  object-fit: cover;
+  background: url(/public/img/rendi.jpeg) center -13rem / 80% no-repeat;
+  border: .1rem solid #444;
 }
 
 .contact-btn {

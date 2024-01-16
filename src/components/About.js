@@ -9,7 +9,7 @@ const About = () => {
         <h2>About Me</h2>
         <p>My intoduction</p>
       </div>
-      <img src="/img/rendi.jpg" alt="About Image" title="About Image" />
+      <img src="/img/rendi2.jpg" alt="About" title="About" />
       <div className="texts">
         <p>
         With a blend of creativity and precision, I embark on a journey to bridge the gap between design and functionality. My expertise lies in transforming ideas into interactive realities, and I thrive on the challenges of the ever-evolving digital landscape.
