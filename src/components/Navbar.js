@@ -33,7 +33,7 @@ const Navbar = () => {
             </li>
             <li>
               <HashLink smooth to="/#project-section" onClick={handleLinkClick}>
-                Projects
+                Portfolio
               </HashLink>
             </li>
             <li>

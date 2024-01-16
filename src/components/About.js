@@ -12,7 +12,7 @@ const About = () => {
       <img src="/img/rendi2.jpg" alt="About" title="About" />
       <div className="texts">
         <p>
-        With a blend of creativity and precision, I embark on a journey to bridge the gap between design and functionality. My expertise lies in transforming ideas into interactive realities, and I thrive on the challenges of the ever-evolving digital landscape.
+        As a full-stack developer, I thrive in crafting innovative solutions that seamlessly integrate front-end aesthetics with back-end functionality. With a passion for clean code and a commitment to delivering robust applications, I bring versatility and expertise to every project I undertake.
         </p>
         <h3>Find Me on Social Media</h3>
         <div className="list-of-social-media">
