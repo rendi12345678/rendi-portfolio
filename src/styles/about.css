@@ -80,6 +80,14 @@
   z-index: 9999;
 }
 
+.list-of-social-media figure img:hover {
+  transform: rotate(360deg);
+}
+
+.list-of-social-media figure img:active {
+  transform: scale(.9);
+}
+
 @media (width < 768px) {
   .about-section {
     grid: 

@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, button {
 }
 
 p, a, figcaption {
-  font-family: "Source Sans", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
 }
 
@@ -103,4 +103,16 @@ a {
   justify-content: center;
   padding: 0 clamp(2rem, 4svw, 4rem);
   width: 100%;
+}
+
+button, img {
+  transition: 300ms;
+}
+
+button:hover {
+  filter: brightness(85%);
+}
+
+button:active {
+  transform: scale(.9);
 }

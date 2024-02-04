@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/reset.css";
 import "../styles/project.css";
+import "../styles/reset.css";
 
 const Project = () => {
   const movePage = (url) => {
@@ -44,7 +44,15 @@ const Project = () => {
     title: "Nanny's Landing Page",
     demoLink: "https://ningsih-nanny.web.app",
     description:
-      "This is my personal project, a nanny services landing page built with React.js. The platform offers a user-friendly interface for families to discover and connect with experienced nannies, showcasing essential information such as profiles and contact details.",
+      "This is my personal project, a nanny services landing page built with React.js. The platform offers a user-friendly interface for families to discover and connect with experienced nanny, showcasing essential information such as profiles and contact details.",
+  };
+
+  const websitePilpres = {
+    imageUrl: "/img/web-capres.png",
+    title: "Fun Pilpres Site",
+    demoLink: "https://fun-pilpres.web.app",
+    description:
+      "This is my personal project, built with the MERN stack, to allow users to choose presidential candidates based on specific reasons, with user authentication using JWT, and to view the total votes solely for entertainment purposes.",
   };
 
   return (
@@ -57,6 +65,7 @@ const Project = () => {
         {showProject(typingTestGame)}
         {showProject(onlineBookStore)}
         {showProject(nannyLandingPage)}
+        {showProject(websitePilpres)}
       </div>
     </section>
   );

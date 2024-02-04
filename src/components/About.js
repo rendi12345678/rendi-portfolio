@@ -3,6 +3,10 @@ import "../styles/about.css";
 import "../styles/reset.css";
 
 const About = () => {
+  const goToAnotherPage = url => {
+    window.location.href = url
+  }
+
   return (
     <section className="about-section" id="about-section">
       <div className="about-title">
@@ -17,13 +21,13 @@ const About = () => {
         <h3>Find Me on Social Media</h3>
         <div className="list-of-social-media">
           <figure>
-            <img src="/img/github-logo.png" alt="" />
+            <img src="/img/github-logo.png" alt="" onClick={() => goToAnotherPage("https://github.com/rendi12345678")}/>
           </figure>
           <figure>
-            <img src="/img/facebook.png" alt="" />
+            <img src="/img/facebook.png" alt="" onClick={() => goToAnotherPage("https://www.facebook.com/rendi.v.setiawan.9?mibextid=ZbWKwL")}/>
           </figure>
           <figure>
-            <img src="/img/whatsapp.png" alt="" />
+            <img src="/img/whatsapp.png" alt="" onClick={() => goToAnotherPage("https://wa.me/6285733300369")}/>
           </figure>
         </div>
       </div>
