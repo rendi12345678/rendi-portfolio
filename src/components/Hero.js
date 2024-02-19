@@ -17,9 +17,12 @@ const Hero = () => {
           <h1>
             HI I AM <span>RENDI</span>
           </h1>
-          <h3>I am a Full Stack Developer</h3>
+          <h3>I am a Front End Developer</h3>
           <p>
-          In the digital realm, I create seamless, user-centric interfaces with visionary designs. From front-end elegance to back-end robustness, I craft pixel-perfect stories in code.
+            I specialize in converting design concepts into code, crafting
+            elegant user interfaces with responsive layouts, captivating
+            animations, and intuitive interactions to enhance user engagement
+            and satisfaction.
           </p>
           <button className="contact-btn" onClick={scrollToContactSection}>
             Contact Me
