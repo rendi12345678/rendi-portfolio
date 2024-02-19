@@ -54,7 +54,7 @@
   width: 100%;
   width: clamp(15rem, 35svw, 35rem);
   height: clamp(15rem, 35svw, 35rem);
-  background: url(/public/img/rendi1.jpeg) center 50% / 80% no-repeat;
+  background: url(/public/img/favicon.ico) center 20% / 85% no-repeat;
   border: 0.1rem solid #444;
 }
 
