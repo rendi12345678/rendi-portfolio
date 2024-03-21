@@ -1,22 +1,12 @@
-import React from 'react';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Skills from '../components/Skills';
-import Project from '../components/Project';
-import Contact from '../components/Contact';
+import React from "react";
+import Hero from "../components/container/Hero";
 
 const Home = () => {
   return (
     <>
-    <Hero/>
-    <div className="container-section">
-     <About/>
-     <Skills/>
-     <Project/>
-     <Contact/>
-    </div>
+      <Hero />
     </>
   );
-}
+};
 
 export default Home;

@@ -1,24 +1,25 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import "./styles/reset.css";
-import "./styles/navbar.css";
-import "./styles/body.css";
-import "./styles/hero.css";
-import Home from "./Pages/Home";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/Footer";
-import Projects from "./Pages/Projects";
+import Navbar from "./components/container/Navbar";
+import Home from "./pages/Home";
+
+const routes = [
+  {
+    path: "/",
+    element: <Home />,
+  },
+];
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
       <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/projects" exact element={<Projects />} />
+        {routes.map((route, index) => (
+          <Route path={route.path} element={route.element} key={index} />
+        ))}
       </Routes>
-      <Footer />
-    </div>
+    </>
   );
 }
 
