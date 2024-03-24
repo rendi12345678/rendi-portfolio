@@ -1,5 +1,6 @@
 import React from "react";
 import "../../assets/styles/navbar.css";
+import useButtons from "../../hooks/useButtons";
 import LinkItem from "../ui/LinkItem";
 import NavList from "../ui/NavList";
 
@@ -35,6 +36,8 @@ const linkItems = [
 ];
 
 function Navbar() {
+  const { PrimaryButton } = useButtons();
+
   return (
     <header>
       <h3>Rendi's Portfolio</h3>
@@ -43,6 +46,7 @@ function Navbar() {
           <LinkItem to={to} text={text} key={index} />
         ))}
       </NavList>
+      <PrimaryButton type="button" text="Contact Me" color="blue" />
     </header>
   );
 }

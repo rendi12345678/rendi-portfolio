@@ -1,0 +1,30 @@
+.skills .container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+
+.skills .container ul {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: calc(var(--base-size) * 2);
+}
+
+.skills .container ul li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-color);
+  padding: calc(var(--base-size));
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+.skills .container ul li div p {
+  text-align: center;
+}
+
+.skills .container .title {
+  text-align: center;
+}

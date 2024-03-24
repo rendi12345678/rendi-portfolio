@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/container/Navbar";
+import Navbar from "./components/main/Navbar";
 import Home from "./pages/Home";
 
 const routes = [

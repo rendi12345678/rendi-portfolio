@@ -1,0 +1,19 @@
+.services .container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.services .container .list-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: calc(var(--base-size) * 2);
+}
+
+.services .container .list-services li {
+  text-align: left;
+  padding: calc(var(--base-size) * 2);
+  background: var(--secondary-color);
+  border-radius: var(--border-radius);
+}

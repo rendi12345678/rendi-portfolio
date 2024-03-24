@@ -1,9 +1,10 @@
-section.hero {
+.hero {
+  position: relative;
   height: 100svh;
-  background: radial-gradient(var(--secondary-color), var(--primary-color));
+  margin-bottom: 0;
 }
 
-section.hero .container {
+.hero .container {
   display: grid;
   align-items: center;
   justify-items: center;
@@ -11,25 +12,31 @@ section.hero .container {
   height: 100%;
 }
 
-section.hero .info {
+.hero .info {
   display: flex;
   justify-items: center;
   align-items: center;
   flex-direction: column;
 }
 
-section.hero .info span {
+.hero .info h1 {
+  text-align: center;
+  letter-spacing: -0.1rem;
+}
+
+.hero .info span {
   color: var(--accent-color);
 }
 
-section.hero .info .circle-image {
+.hero .info .circle-image {
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
   background: url("/public/images/rendi1.jpeg") center 15% / cover no-repeat;
-  margin-bottom: 2rem;
+  margin-bottom: calc(var(--base-size) * 2);
 }
 
-section.hero .info p {
+.hero .info p {
+  max-width: 60ch;
   text-align: center;
 }
