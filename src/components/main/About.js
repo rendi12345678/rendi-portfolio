@@ -5,7 +5,7 @@ import Title from "../ui/Title";
 
 function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <Container>
         <div className="about-image">
           <img src="/images/rendi2.jpg" alt="Rendi" />

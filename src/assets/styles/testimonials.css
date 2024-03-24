@@ -1,0 +1,42 @@
+.testimonials .container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.testimonials .container .list-testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: calc(var(--base-size) * 2);
+  text-align: left;
+}
+
+.testimonials .container .list-testimonials li {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--base-size) * 2);
+}
+
+.testimonials .container .list-testimonials li .review-text {
+  border-radius: var(--border-radius);
+  background: var(--secondary-color);
+  padding: calc(var(--base-size) * 2);
+}
+
+.testimonials .container .list-testimonials .client-profile {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--base-size) * 2);
+}
+
+.testimonials .container .list-testimonials .client-profile h5 {
+  margin-bottom: 0;
+}
+
+.testimonials .container .list-testimonials img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: fill;
+}

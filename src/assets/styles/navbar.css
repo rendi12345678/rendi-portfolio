@@ -3,13 +3,18 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 8rem;
   z-index: 999;
   padding: calc(var(--base-vertical-fluid-size) / 2)
     calc(var(--base-horizontal-fluid-size));
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 header nav {

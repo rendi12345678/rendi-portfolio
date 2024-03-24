@@ -3,34 +3,35 @@ import "../../assets/styles/navbar.css";
 import useButtons from "../../hooks/useButtons";
 import LinkItem from "../ui/LinkItem";
 import NavList from "../ui/NavList";
+import Container from "./../ui/Container";
 
 const linkItems = [
   {
-    to: "/",
+    to: "/#hero",
     text: "Home",
   },
   {
-    to: "/",
+    to: "/#about",
     text: "About",
   },
   {
-    to: "/",
+    to: "/#services",
     text: "Services",
   },
   {
-    to: "/",
+    to: "/#skills",
     text: "Skills",
   },
   {
-    to: "/",
-    text: "Projects",
+    to: "/#portfolio",
+    text: "Portfolio",
   },
   {
-    to: "/",
+    to: "/#testimonials",
     text: "Testimonials",
   },
   {
-    to: "/",
+    to: "/#contact",
     text: "Contact",
   },
 ];
@@ -40,13 +41,14 @@ function Navbar() {
 
   return (
     <header>
-      <h3>Rendi's Portfolio</h3>
-      <NavList>
-        {linkItems.map(({ to, text }, index) => (
-          <LinkItem to={to} text={text} key={index} />
-        ))}
-      </NavList>
-      <PrimaryButton type="button" text="Contact Me" color="blue" />
+      <Container>
+        <h3>Rendi's Portfolio</h3>
+        <NavList>
+          {linkItems.map(({ to, text }, index) => (
+            <LinkItem to={to} text={text} key={index} />
+          ))}
+        </NavList>
+      </Container>
     </header>
   );
 }

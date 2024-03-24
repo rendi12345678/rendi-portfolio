@@ -1,0 +1,40 @@
+.contact .container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.contact .container .list-contact-and-maps {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--base-size) * 2);
+  box-sizing: border-box;
+}
+
+.contact .container .list-contact-and-maps .maps {
+  background: #000;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+
+.contact .container .list-contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: calc(var(--base-size) * 2);
+  text-align: left;
+  width: 100%;
+}
+
+.contact .container .list-contacts li {
+  display: flex;
+  row-gap: calc(var(--base-size));
+  align-items: center;
+}
+
+.contact .container .list-contacts li h5 {
+  margin-bottom: 0;
+}

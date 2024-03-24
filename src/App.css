@@ -161,7 +161,7 @@ table {
   --h4: clamp(1.6rem, 2vw, 2rem);
   --h5: clamp(1.4rem, 1.6vw, 1.6rem);
   --body-text: clamp(1.4rem, 1.6vw, 1.6rem);
-  --max-width: 100rem;
+  --max-width: 110rem;
   --border-radius: 1.5rem;
   --base-size: clamp(1rem, 1.5vw, 1.5rem);
   --box-shadow: 0.1rem 0.1rem 0.5rem rgba(255, 255, 255, 0.25);
@@ -192,7 +192,6 @@ table {
 body {
   background: var(--primary-color);
   overflow-x: hidden;
-  height: 300rem;
 }
 
 body::before {
@@ -323,6 +322,10 @@ a {
   color: var(--body-color);
   border-radius: 1.5rem;
   transition: 500ms;
+}
+
+a:hover {
+  color: var(--accent-color);
 }
 
 button {

@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function LinkItem({ to, text }) {
   return (
     <li>
-      <Link to={to}>{text}</Link>
+      <HashLink to={to} smooth>
+        {text}
+      </HashLink>
     </li>
   );
 }
