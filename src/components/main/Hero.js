@@ -21,8 +21,8 @@ function Hero() {
             I'm React Js <span>Developer</span>
           </h1>
           <p>
-            I am specialize in converting design concepts into code, ensuring
-            responsiveness and turning ideas into reality.
+            I specialize in translating design concepts into code, crafting
+            interactive web experiences across devices and platforms
           </p>
           <PrimaryButton text="Contact Me" />
         </div>

@@ -43,6 +43,6 @@
 
 @media (width < 430px) {
   .hero .info p {
-    max-width: 40ch;
+    max-width: 43ch;
   }
 }
