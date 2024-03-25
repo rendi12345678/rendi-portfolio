@@ -1,9 +1,11 @@
 import React from "react";
 
-function ContactCard({ title, text, link }) {
+function ContactCard({ icon, text, link }) {
   return (
     <li>
-      <h5>{title} :</h5> &nbsp;
+      <div className="icon">
+        <img src={icon} alt="Icon" />
+      </div>
       <a href={link}>
         <p>{text}</p>
       </a>
