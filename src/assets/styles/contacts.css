@@ -61,6 +61,14 @@
     grid-template-columns: 1fr;
   }
 
+  .contact .container .list-contact-and-maps .maps {
+    order: 1;
+  }
+
+  .contact .container .list-contact-and-maps .info {
+    order: 2;
+  }
+
   .contact .container .list-contacts li .icon {
     width: 5rem;
     height: 5rem;

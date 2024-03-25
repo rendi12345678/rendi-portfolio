@@ -28,7 +28,7 @@ const listContacts = [
 
 function ListContacts() {
   return (
-    <div>
+    <div className="info">
       <Title title="Contact Me" description="Let's call me now" />
       <List className="list-contacts">
         {listContacts.map(({ icon, text, link }, index) => (
