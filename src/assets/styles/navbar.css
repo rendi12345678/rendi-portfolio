@@ -38,3 +38,35 @@ header nav ul {
   width: 100%;
   height: 100%;
 }
+
+header .hamburger-menu {
+  display: none;
+  flex-direction: column;
+  width: 3.5rem;
+  height: 2.5rem;
+  justify-content: space-between;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 100%;
+  height: 0.3rem;
+  background: var(--contrast-color);
+  border-radius: var(--border-radius);
+}
+
+@media (width < 992px) {
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  header .hamburger-menu {
+    display: flex;
+  }
+
+  header nav ul {
+    display: none;
+  }
+}

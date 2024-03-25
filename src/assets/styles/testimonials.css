@@ -40,3 +40,10 @@
   border-radius: 50%;
   object-fit: fill;
 }
+
+@media (width < 768px) {
+  .testimonials .container .list-testimonials img {
+    width: 3rem;
+    height: 3rem;
+  }
+}

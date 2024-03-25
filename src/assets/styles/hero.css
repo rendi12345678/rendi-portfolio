@@ -40,3 +40,9 @@
   max-width: 60ch;
   text-align: center;
 }
+
+@media (width < 430px) {
+  .hero .info p {
+    max-width: 40ch;
+  }
+}
