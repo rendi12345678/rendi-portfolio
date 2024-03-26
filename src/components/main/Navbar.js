@@ -1,6 +1,5 @@
 import React from "react";
 import "../../assets/styles/navbar.css";
-import useNavbarContext from "../../hooks/useNavbarContext";
 import HamburgerMenu from "../ui/HamburgerMenu";
 import LinkItem from "../ui/LinkItem";
 import NavList from "../ui/NavList";
@@ -38,10 +37,8 @@ const linkItems = [
 ];
 
 function Navbar() {
-  const { headerRef } = useNavbarContext();
-
   return (
-    <header ref={headerRef}>
+    <header>
       <Container>
         <nav>
           <h3>Rendi's Portfolio</h3>

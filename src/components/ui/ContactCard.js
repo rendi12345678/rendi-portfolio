@@ -1,14 +1,13 @@
 import React from "react";
 
-function ContactCard({ icon, text, link }) {
+function ContactCard({ icon, text }) {
   return (
     <li>
       <div className="icon">
         <img src={icon} alt="Icon" />
       </div>
-      <a href={link}>
-        <p>{text}</p>
-      </a>
+
+      <p>{text}</p>
     </li>
   );
 }

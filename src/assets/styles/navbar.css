@@ -39,7 +39,7 @@ header nav ul {
   gap: calc(var(--base-size) * 2);
   width: fit-content;
   height: 100%;
-  transition: 800ms;
+  transition: 500ms;
 }
 
 header .hamburger-menu {
@@ -47,6 +47,7 @@ header .hamburger-menu {
   flex-direction: column;
   width: 3.5rem;
   height: 2.5rem;
+  align-items: end;
   justify-content: space-between;
   z-index: 999;
   cursor: pointer;
@@ -57,6 +58,7 @@ header .hamburger-menu {
   height: 0.3rem;
   background: var(--contrast-color);
   border-radius: var(--border-radius);
+  transition: 500ms;
 }
 
 header .container .close-nav-btn {
@@ -78,24 +80,38 @@ header .container .close-nav-btn {
   }
 
   header nav ul {
-    display: none;
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  header nav ul.active {
     position: absolute;
-    transform: translateY(0);
-    inset: 0;
-    z-index: 9;
-    display: flex;
-    opacity: 1;
     flex-direction: column;
     justify-content: space-between;
+    transform: translateY(-100%);
+    inset: 0;
+    opacity: 0;
     height: 100svh;
     width: 100%;
     padding: 8rem 0;
     padding-top: 10.6rem;
     background: var(--secondary-color);
+    z-index: 9;
+  }
+
+  header nav ul.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  header .hamburger-menu.active span:first-child {
+    transform: rotate(-40deg);
+    transform-origin: top right;
+    background: red;
+  }
+
+  header .hamburger-menu.active span:nth-child(2) {
+    display: none;
+  }
+
+  header .hamburger-menu.active span:last-child {
+    transform: rotate(40deg);
+    transform-origin: bottom right;
+    background: red;
   }
 }

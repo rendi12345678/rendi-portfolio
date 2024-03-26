@@ -1,20 +1,14 @@
 import React from "react";
-import useNavbarContext from "../../hooks/useNavbarContext";
+import useNavbar from "../../hooks/useNavbar";
 
 function HamburgerMenu() {
-  const { navbarRef } = useNavbarContext();
-
-  const toggleNav = () => {
-    navbarRef.current.classList.toggle("active");
-
-    console.log(`Clicked`);
-  };
+  const { toggleNav, hamburgerMenuRef } = useNavbar();
 
   return (
-    <div className="hamburger-menu" onClick={toggleNav}>
-      <span></span>
-      <span></span>
-      <span></span>
+    <div className="hamburger-menu" ref={hamburgerMenuRef} onClick={toggleNav}>
+      <span ref={hamburgerMenuRef}></span>
+      <span ref={hamburgerMenuRef}></span>
+      <span ref={hamburgerMenuRef}></span>
     </div>
   );
 }

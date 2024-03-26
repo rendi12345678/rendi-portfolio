@@ -5,11 +5,11 @@ export const NavbarContext = createContext(null);
 
 function NavbarProvider({ children }) {
   const navbarRef = useRef(null);
-  const headerRef = useRef(null);
+  const hamburgerMenuRef = useRef(null);
 
   const contextValues = {
     navbarRef,
-    headerRef,
+    hamburgerMenuRef,
   };
 
   return (
