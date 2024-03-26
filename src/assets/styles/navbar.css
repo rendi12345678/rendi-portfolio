@@ -10,16 +10,17 @@ header {
 }
 
 header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
   width: 100%;
 }
 
 header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: fit-content;
   height: 100%;
+  width: 100%;
 }
 
 header button {
@@ -28,6 +29,7 @@ header button {
 
 header h3 {
   margin-bottom: 0;
+  z-index: 999;
 }
 
 header nav ul {
@@ -35,8 +37,9 @@ header nav ul {
   justify-content: space-between;
   align-items: center;
   gap: calc(var(--base-size) * 2);
-  width: 100%;
+  width: fit-content;
   height: 100%;
+  transition: 800ms;
 }
 
 header .hamburger-menu {
@@ -45,7 +48,7 @@ header .hamburger-menu {
   width: 3.5rem;
   height: 2.5rem;
   justify-content: space-between;
-  z-index: 9;
+  z-index: 999;
   cursor: pointer;
 }
 
@@ -56,17 +59,43 @@ header .hamburger-menu {
   border-radius: var(--border-radius);
 }
 
-@media (width < 992px) {
-  header nav {
-    display: flex;
-    align-items: center;
-  }
+header .container .close-nav-btn {
+  display: none;
+}
 
+@media (width < 992px) {
   header .hamburger-menu {
     display: flex;
+    z-index: 9999;
+  }
+
+  header .container .close-nav-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    right: 0;
   }
 
   header nav ul {
     display: none;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  header nav ul.active {
+    position: absolute;
+    transform: translateY(0);
+    inset: 0;
+    z-index: 9;
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100svh;
+    width: 100%;
+    padding: 8rem 0;
+    padding-top: 10.6rem;
+    background: var(--secondary-color);
   }
 }

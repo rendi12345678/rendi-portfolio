@@ -1,7 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-function List({ children, className }) {
-  return <ul className={className}>{children}</ul>;
-}
+const List = forwardRef(({ children, className }, ref) => {
+  return (
+    <ul className={className} ref={ref}>
+      {children}
+    </ul>
+  );
+});
 
 export default List;

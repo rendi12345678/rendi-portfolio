@@ -1,13 +1,14 @@
 import React from "react";
-import HamburgerMenu from "./HamburgerMenu";
+import useNavbarContext from "../../hooks/useNavbarContext";
 import List from "./List";
 
 function NavList({ children }) {
+  const { navbarRef } = useNavbarContext();
+
   return (
-    <nav>
-      <List>{children}</List>
-      <HamburgerMenu />
-    </nav>
+    <>
+      <List ref={navbarRef}>{children}</List>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "../../assets/styles/navbar.css";
-import useButtons from "../../hooks/useButtons";
+import useNavbarContext from "../../hooks/useNavbarContext";
+import HamburgerMenu from "../ui/HamburgerMenu";
 import LinkItem from "../ui/LinkItem";
 import NavList from "../ui/NavList";
 import Container from "./../ui/Container";
@@ -37,17 +38,20 @@ const linkItems = [
 ];
 
 function Navbar() {
-  const { PrimaryButton } = useButtons();
+  const { headerRef } = useNavbarContext();
 
   return (
-    <header>
+    <header ref={headerRef}>
       <Container>
-        <h3>Rendi's Portfolio</h3>
-        <NavList>
-          {linkItems.map(({ to, text }, index) => (
-            <LinkItem to={to} text={text} key={index} />
-          ))}
-        </NavList>
+        <nav>
+          <h3>Rendi's Portfolio</h3>
+          <HamburgerMenu />
+          <NavList>
+            {linkItems.map(({ to, text }, index) => (
+              <LinkItem to={to} text={text} key={index} />
+            ))}
+          </NavList>
+        </nav>
       </Container>
     </header>
   );
