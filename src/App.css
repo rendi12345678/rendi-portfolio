@@ -168,6 +168,7 @@ table {
   --translate-size: 20rem;
   --translate-size-min: -20rem;
   --base-horizontal-fluid-size: 5vw;
+  --animation-time: 1.3s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -418,7 +419,7 @@ label {
 /* Reveal Animation */
 .reveal {
   opacity: 0;
-  transition: 1s;
+  transition: var(--animation-time) 300ms;
 }
 
 .reveal.show-animation {

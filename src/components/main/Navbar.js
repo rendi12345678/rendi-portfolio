@@ -45,7 +45,7 @@ function Navbar() {
           <HamburgerMenu />
           <NavList>
             {linkItems.map(({ to, text }, index) => (
-              <LinkItem to={to} text={text} key={index} />
+              <LinkItem to={to} text={text} key={index} delay={index + 1} />
             ))}
           </NavList>
         </nav>

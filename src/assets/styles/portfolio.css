@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   text-align: left;
+  width: 100%;
   gap: calc(var(--base-size) * 2);
 }
 

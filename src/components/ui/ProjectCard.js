@@ -2,7 +2,7 @@ import React from "react";
 
 function ProjectCard({ imageUrl, title, linkdemo, description }) {
   return (
-    <li>
+    <>
       <figure className="project-image">
         <img src={imageUrl} alt="Project" />
       </figure>
@@ -16,7 +16,7 @@ function ProjectCard({ imageUrl, title, linkdemo, description }) {
         </h5>
         <p className="project-description">{description}</p>
       </div>
-    </li>
+    </>
   );
 }
 

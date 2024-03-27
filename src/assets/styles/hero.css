@@ -37,7 +37,7 @@
 .hero h5,
 .hero p,
 .hero button {
-  animation: slideToTop 1.5s calc(100ms * var(--delay)) forwards;
+  animation: slideToTop 1s calc(100ms * var(--delay)) forwards;
 }
 
 .hero .info span {

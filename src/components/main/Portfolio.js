@@ -1,8 +1,8 @@
 import React from "react";
 import "../../assets/styles/portfolio.css";
 import Container from "../ui/Container";
-import ListPortfolio from "../ui/ListPortfolio";
 import Title from "../ui/Title";
+import ListPortfolio from "./../ui/ListPortfolio";
 
 function Portfolio() {
   return (
