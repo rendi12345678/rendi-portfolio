@@ -15,6 +15,12 @@ const listTestimonials = [
     reviewText:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis provident amet expedita? Velit perspiciatis, sequi distinctio iure obcaecati recusandae veritatis.",
   },
+  {
+    imageUrl: "/images/rendi1.jpeg",
+    name: "Rendi Nurdiansyah",
+    reviewText:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis provident amet expedita? Velit perspiciatis, sequi distinctio iure obcaecati recusandae veritatis.",
+  },
 ];
 
 function ListTestimonials() {

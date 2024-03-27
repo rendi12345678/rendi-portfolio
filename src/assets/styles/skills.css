@@ -11,6 +11,15 @@
   gap: calc(var(--base-size) * 2);
 }
 
+.skills .container ul li {
+  transform: translateX(100%);
+  transition-delay: calc(var(--delay) * 100ms);
+}
+
+.skills .container ul li.show-animation {
+  transform: translate(0);
+}
+
 .skills .container ul li div {
   display: flex;
   justify-content: center;
@@ -27,4 +36,9 @@
 
 .skills .container .title {
   text-align: center;
+  transform: translateX(var(--translate-size-min));
+}
+
+.skills .container .title.show-animation {
+  transform: translate(0);
 }

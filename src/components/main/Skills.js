@@ -8,7 +8,11 @@ function Skills() {
   return (
     <section className="skills" id="skills">
       <Container>
-        <Title title="My skills" description="My technical level" />
+        <Title
+          title="My skills"
+          description="My technical level"
+          className="reveal"
+        />
         <ListSkills />
       </Container>
     </section>

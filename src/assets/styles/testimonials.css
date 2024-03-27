@@ -7,27 +7,26 @@
 
 .testimonials .container .list-testimonials {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: calc(var(--base-size) * 2);
   text-align: left;
 }
 
 .testimonials .container .list-testimonials li {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: calc(var(--base-size) * 2);
-}
-
-.testimonials .container .list-testimonials li .review-text {
   border-radius: var(--border-radius);
   background: var(--secondary-color);
   padding: calc(var(--base-size) * 2);
+  gap: calc(var(--base-size) * 1);
 }
 
 .testimonials .container .list-testimonials .client-profile {
+  --size: 3.5rem;
   display: flex;
   align-items: center;
-  gap: calc(var(--base-size) * 2);
+  gap: calc(var(--base-size) * 1);
 }
 
 .testimonials .container .list-testimonials .client-profile h5 {
@@ -35,9 +34,10 @@
 }
 
 .testimonials .container .list-testimonials img {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: var(--size);
+  height: var(--size);
   border-radius: 50%;
+  z-index: 9;
   object-fit: fill;
 }
 

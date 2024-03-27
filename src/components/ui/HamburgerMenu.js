@@ -6,9 +6,9 @@ function HamburgerMenu() {
 
   return (
     <div className="hamburger-menu" ref={hamburgerMenuRef} onClick={toggleNav}>
-      <span ref={hamburgerMenuRef}></span>
-      <span ref={hamburgerMenuRef}></span>
-      <span ref={hamburgerMenuRef}></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   );
 }

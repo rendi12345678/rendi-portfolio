@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-function SkillCard({ text }) {
+function SkillCard({ text, delay }) {
+  const liRef = useRef(null);
+
+  useEffect(() => {
+    liRef.current.style = `--delay: ${delay};`;
+  }, [delay]);
+
   return (
-    <li>
+    <li ref={liRef} className="reveal">
       <div>
         <p>{text}</p>
       </div>

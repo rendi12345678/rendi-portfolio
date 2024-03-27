@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+.services .container .title {
+  transform: translateX(var(--translate-size));
+}
+
+.services .container .title.show-animation {
+  transform: translate(0);
+}
+
 .services .container .list-services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
@@ -16,4 +24,10 @@
   padding: calc(var(--base-size) * 2);
   background: var(--secondary-color);
   border-radius: var(--border-radius);
+  transition-delay: calc(var(--delay) * 100ms);
+  transform: translateX(-100%);
+}
+
+.services .container .list-services li.show-animation {
+  transform: translate(0);
 }

@@ -8,7 +8,11 @@ function Services() {
   return (
     <section className="services" id="services">
       <Container>
-        <Title title="My Services" description="What i offer" />
+        <Title
+          title="My Services"
+          description="What i offer"
+          className="reveal"
+        />
         <ListServices />
       </Container>
     </section>

@@ -1,5 +1,4 @@
 .hero {
-  position: relative;
   height: 100svh;
   margin-bottom: 0;
 }
@@ -19,9 +18,26 @@
   flex-direction: column;
 }
 
+.hero .info.show-animation {
+  transform: translate(0);
+}
+
 .hero .info h1 {
   text-align: center;
   letter-spacing: -0.1rem;
+  --delay: 3;
+}
+
+.hero h5 {
+  --delay: 2;
+}
+
+.hero h1,
+.hero .circle-image,
+.hero h5,
+.hero p,
+.hero button {
+  animation: slideToTop 1.5s calc(100ms * var(--delay)) forwards;
 }
 
 .hero .info span {
@@ -29,6 +45,7 @@
 }
 
 .hero .info .circle-image {
+  --delay: 1;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
@@ -37,12 +54,29 @@
 }
 
 .hero .info p {
+  --delay: 4;
   max-width: 60ch;
   text-align: center;
+}
+
+.hero button {
+  --delay: 5;
 }
 
 @media (width < 430px) {
   .hero .info p {
     max-width: 43ch;
+  }
+}
+
+@keyframes slideToTop {
+  0% {
+    transform: translateY(var(--translate-size));
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
   }
 }

@@ -7,6 +7,27 @@ section.about .container {
 
 .about .about-image {
   width: 100%;
+  transform: translateX(-100%);
+}
+
+.about .title {
+  --delay: 1;
+}
+
+.about p {
+  --delay: 2;
+}
+
+.about .title,
+.about p {
+  transform: translateY(var(--translate-size));
+  transition-delay: calc(100ms * var(--delay));
+}
+
+.about .about-image.show-animation,
+.about .title.show-animation,
+.about p.show-animation {
+  transform: translate(0);
 }
 
 .about .about-image img {
