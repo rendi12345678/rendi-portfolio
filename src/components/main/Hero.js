@@ -18,7 +18,7 @@ function Hero() {
           <div className="circle-image"></div>
           <h5>Hi, I'm Rendi</h5>
           <h1>
-            I'm React Js <span>Developer</span>
+            I'm a Web <span>Developer</span>
           </h1>
           <p>
             I specialize in translating design concepts into code, crafting

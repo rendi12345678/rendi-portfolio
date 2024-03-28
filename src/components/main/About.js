@@ -8,7 +8,7 @@ function About() {
     <section className="about" id="about">
       <Container>
         <div className="about-image reveal">
-          <img src="/images/rendi2.jpg" alt="Rendi" className="reveal" />
+          <img src="/images/rendi1.jpeg" alt="Rendi" className="reveal" />
         </div>
         <div className="about-info">
           <Title
@@ -17,12 +17,12 @@ function About() {
             className="reveal"
           />
           <p className="reveal">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nisi
-            cupiditate tempora atque odit adipisci tenetur at ullam, tempore
-            animi velit aperiam doloremque rem excepturi quia magnam id est
-            assumenda vitae quam? Ullam quisquam, aliquid quae vel eaque
-            necessitatibus asperiores mollitia ut, quam itaque consequuntur.
-            Maxime consequatur numquam error omnis.
+            Hi, my name is Rendi Virgantara Setiawan. I am a web developer based
+            in Indonesia who is super passionate about coding and also loves
+            calisthenics. As a web developer, I help business owners get online
+            in order to increase sales. I do it because I love it and I am super
+            passionate about it. It makes me incredibly happy in life because I
+            can provide value to other people.
           </p>
         </div>
       </Container>
