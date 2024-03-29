@@ -192,6 +192,7 @@ table {
 
 /* Global */
 body {
+  width: 100vw;
   background: var(--primary-color);
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
@@ -221,6 +222,7 @@ body::before {
 }
 
 section {
+  overflow-x: hidden;
   margin-bottom: calc(var(--base-size) * 10);
 }
 
