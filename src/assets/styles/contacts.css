@@ -70,6 +70,8 @@
 
   .contact .container .list-contact-and-maps .maps {
     order: 1;
+    transform: translateX(0);
+    transform: translateY(var(--translate-size-min));
   }
 
   .contact .container .list-contact-and-maps .info {
