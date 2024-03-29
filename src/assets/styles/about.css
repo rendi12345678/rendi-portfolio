@@ -3,7 +3,6 @@ section.about .container {
   grid-template-columns: 0.4fr 0.6fr;
   align-items: center;
   gap: calc(var(--base-size) * 2);
-  overflow: hidden;
 }
 
 .about .title {
@@ -26,7 +25,7 @@ section.about .container {
 }
 
 .about .about-image img {
-  transform: translateX(-100%);
+  transform: translateX(var(--translate-size-min));
   object-fit: cover;
   aspect-ratio: 1 / 1;
   object-position: center 15%;
@@ -36,5 +35,12 @@ section.about .container {
 @media (width < 768px) {
   section.about .container {
     grid-template-columns: 1fr;
+    overflow-y: hidden;
+  }
+
+  .about .title,
+  .about p {
+    transform: translateY(0);
+    transform: translateX(var(--translate-size-min));
   }
 }

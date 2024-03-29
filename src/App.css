@@ -218,7 +218,6 @@ body::before {
   width: 100%;
   max-width: var(--max-width);
   padding: 0 var(--base-horizontal-fluid-size);
-  overflow-x: hidden !important;
 }
 
 section {
