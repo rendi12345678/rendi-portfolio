@@ -8,7 +8,11 @@ function Portfolio() {
   return (
     <section className="portfolio" id="portfolio">
       <Container>
-        <Title title="My Portfolio" description="My projects" />
+        <Title
+          title="My Portfolio"
+          description="My projects"
+          className="reveal"
+        />
         <ListPortfolio />
       </Container>
     </section>

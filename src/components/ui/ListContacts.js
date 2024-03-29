@@ -25,10 +25,14 @@ const listContacts = [
 function ListContacts() {
   return (
     <div className="info">
-      <Title title="Contact Me" description="Let's call me now" />
+      <Title
+        title="Contact Me"
+        description="Let's call me now"
+        className="reveal"
+      />
       <List className="list-contacts">
         {listContacts.map(({ icon, text }, index) => (
-          <ContactCard key={index} icon={icon} text={text} />
+          <ContactCard key={index} icon={icon} text={text} delay={index} />
         ))}
       </List>
     </div>

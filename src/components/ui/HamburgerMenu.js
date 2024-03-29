@@ -5,7 +5,11 @@ function HamburgerMenu() {
   const { toggleNav, hamburgerMenuRef } = useNavbar();
 
   return (
-    <div className="hamburger-menu" ref={hamburgerMenuRef} onClick={toggleNav}>
+    <div
+      className="hamburger-menu reveal"
+      ref={hamburgerMenuRef}
+      onClick={toggleNav}
+    >
       <span></span>
       <span></span>
       <span></span>

@@ -5,21 +5,20 @@ import TestimonialCard from "./TestimonialCard";
 const listTestimonials = [
   {
     imageUrl: "/images/rendi1.jpeg",
+    name: "Rendi Nurdiansyah",
+    reviewText: "The website is awesome, and it is really cool.",
+  },
+  {
+    imageUrl: "/images/rendi1.jpeg",
     name: "Larasati Ningsih",
     reviewText:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis provident amet expedita? Velit perspiciatis, sequi distinctio iure obcaecati recusandae veritatis.",
+      "The website has a great appearance, it's neat, and clean. Everything is well-organized and easy to navigate.",
   },
   {
     imageUrl: "/images/rendi1.jpeg",
-    name: "Rendi Nurdiansyah",
+    name: "Imam Nurkholis",
     reviewText:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis provident amet expedita? Velit perspiciatis, sequi distinctio iure obcaecati recusandae veritatis.",
-  },
-  {
-    imageUrl: "/images/rendi1.jpeg",
-    name: "Rendi Nurdiansyah",
-    reviewText:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis provident amet expedita? Velit perspiciatis, sequi distinctio iure obcaecati recusandae veritatis.",
+      "The website looks great, even better than most others out there",
   },
 ];
 
@@ -32,6 +31,7 @@ function ListTestimonials() {
           name={name}
           reviewText={reviewText}
           key={index}
+          delay={index}
         />
       ))}
     </List>

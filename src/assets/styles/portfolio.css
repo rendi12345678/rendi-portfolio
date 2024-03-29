@@ -13,8 +13,23 @@
   gap: calc(var(--base-size) * 2);
 }
 
+.portfolio .container .list-portfolio .item {
+  cursor: grab;
+  padding: 0 calc(var(--base-size) * 1);
+  margin-bottom: calc(var(--base-size) * 2);
+}
+
+.portfolio .container .list-portfolio .item:active {
+  cursor: grabbing;
+}
+
 .portfolio .container .list-portfolio .project-image {
   margin-bottom: calc(var(--base-size));
+}
+
+.portfolio .container .list-portfolio.reveal,
+.portfolio .container .title {
+  transform: translateY(var(--translate-size));
 }
 
 .portfolio .container .list-portfolio img {

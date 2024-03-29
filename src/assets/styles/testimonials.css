@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.testimonials .container .title {
+  transform: translateX(var(--translate-size));
+}
+
 .testimonials .container .list-testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -13,7 +17,7 @@
 }
 
 .testimonials .container .list-testimonials li {
-  position: relative;
+  transform: translateX(var(--translate-size-min));
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius);

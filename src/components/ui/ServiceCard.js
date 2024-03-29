@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
+import useDelay from "../../hooks/useDelay";
 
 function ServiceCard({ title, description, delay }) {
   const liRef = useRef(null);
-
-  useEffect(() => {
-    liRef.current.style = `--delay: ${delay};`;
-  }, [delay]);
+  useDelay({ delay, ref: liRef });
 
   return (
     <li ref={liRef} className="reveal">

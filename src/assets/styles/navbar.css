@@ -40,7 +40,6 @@ header nav ul {
   gap: calc(var(--base-size) * 2);
   width: fit-content;
   height: 100%;
-  transition: 500ms;
 }
 
 header nav ul li {
@@ -49,6 +48,7 @@ header nav ul li {
 }
 
 header .hamburger-menu {
+  transform: translateX(var(--translate-size));
   display: none;
   flex-direction: column;
   width: 3.5rem;
@@ -64,6 +64,7 @@ header .hamburger-menu {
   height: 0.3rem;
   background: var(--contrast-color);
   border-radius: var(--border-radius);
+  transition: 800ms;
 }
 
 header .container .close-nav-btn {
@@ -100,7 +101,7 @@ header .container .close-nav-btn {
     z-index: 9999;
     animation: slideToRight var(--animation-time) calc(var(--delay) * 100ms)
       forwards;
-    transition: 500ms;
+    transition: var(--animation-time);
   }
 
   header .container .close-nav-btn {
@@ -120,6 +121,7 @@ header .container .close-nav-btn {
     opacity: 0;
     height: 100svh;
     width: 100%;
+    transition: 800ms;
     padding: 8rem 0;
     padding-top: 10.6rem;
     background: var(--secondary-color);

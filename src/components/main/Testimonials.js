@@ -8,7 +8,11 @@ function Testimonials() {
   return (
     <section className="testimonials" id="testimonials">
       <Container>
-        <Title title="Testimonials" description="What people say" />
+        <Title
+          title="Testimonials"
+          description="What people say"
+          className="reveal"
+        />
         <ListTestimonials />
       </Container>
     </section>

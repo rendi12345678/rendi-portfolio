@@ -20,7 +20,7 @@ function Maps() {
 
   const pushPins = [pushPin];
   return (
-    <div className="maps">
+    <div className="maps reveal">
       <Suspense fallback={<p>Loading...</p>}>
         <BingMapsReact
           bingMapsKey={apiKey}

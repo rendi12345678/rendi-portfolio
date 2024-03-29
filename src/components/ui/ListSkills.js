@@ -30,7 +30,7 @@ function ListSkills() {
   return (
     <List>
       {listSkills.map(({ text }, index) => (
-        <SkillCard text={text} key={index} delay={index + 1} />
+        <SkillCard text={text} key={index} delay={index} />
       ))}
     </List>
   );

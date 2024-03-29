@@ -14,67 +14,55 @@ const listPotfolio = [
   {
     title: "Fun Pilpres",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.",
+      "This is my personal project, built with the MERN stack, to allow users to choose presidential candidates based on specific reasons, with user authentication using JWT, and to view the total votes solely for entertainment purposes.",
     imageUrl: "/images/web-capres.png",
     linkDemo: "https://fun-pilpres.web.app",
   },
   {
-    title: "Fun Pilpres",
+    title: "Nanny's Portfolio",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.",
-    imageUrl: "/images/web-capres.png",
-    linkDemo: "https://fun-pilpres.web.app",
+      "This is my personal project, a nanny landing page built with React.js. The platform offers a user-friendly interface for families to discover and connect with experienced nanny, showcasing essential information such as profiles and contact details.",
+    imageUrl: "/images/nanny-landing-page.png",
+    linkDemo: "https://ningsih-nanny.web.app",
   },
   {
-    title: "Fun Pilpres",
+    title: "Kinemaster Downloader",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.",
-    imageUrl: "/images/web-capres.png",
-    linkDemo: "https://fun-pilpres.web.app",
-  },
-  {
-    title: "Fun Pilpres",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nam.",
-    imageUrl: "/images/web-capres.png",
-    linkDemo: "https://fun-pilpres.web.app",
+      "This is a Kinemaster downloader built with HTML, CSS, and JavaScript for my friend at school, allowing users to download Kinemaster from my friend's file.",
+    imageUrl: "/images/gembos-site.png",
+    linkDemo: "https://rendi12345678.github.io/sohib-gembos/",
   },
 ];
 
 function ListPortfolio() {
   return (
     <Swiper
-      className="list-portfolio"
+      className="list-portfolio reveal"
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      navigation
+      spaceBetween={0}
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
       breakpoints={{
-        // when window width is <= 640px
         640: {
           slidesPerView: 1,
         },
-        // when window width is <= 768px
         768: {
           slidesPerView: 2,
         },
-        // when window width is <= 1024px
         1024: {
           slidesPerView: 2,
         },
       }}
     >
       {listPotfolio.map(({ title, description, imageUrl, linkDemo }, index) => (
-        <SwiperSlide>
+        <SwiperSlide className="item" key={index}>
           <ProjectCard
             title={title}
             description={description}
             imageUrl={imageUrl}
             linkdemo={linkDemo}
-            key={index}
+            className="reveal"
           />
         </SwiperSlide>
       ))}
