@@ -41,7 +41,7 @@ function Navbar() {
     <header>
       <Container>
         <nav>
-          <h3>Rendi's Portfolio</h3>
+          <h3 className="reveal">Rendi's Portfolio</h3>
           <HamburgerMenu />
           <NavList>
             {linkItems.map(({ to, text }, index) => (

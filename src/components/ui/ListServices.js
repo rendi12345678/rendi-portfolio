@@ -4,19 +4,19 @@ import ServiceCard from "./ServiceCard";
 
 const listServices = [
   {
-    title: "Web Design",
+    title: "Custom Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nobis alias in fugit",
+      "Crafting customized websites from scratch to meet each client's unique needs, ensuring a personalized online presence",
   },
   {
-    title: "Maintenance",
+    title: "Responsive Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nobis alias in fugit",
+      "Creating seamless cross-device experiences with responsive design, utilizing fluid layouts, flexible grids, and media queries for a modern user experience",
   },
   {
-    title: "Debugging",
+    title: "Website Optimization",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nobis alias in fugit",
+      "Improving website speed and efficiency through optimization techniques, enhancing user satisfaction",
   },
 ];
 

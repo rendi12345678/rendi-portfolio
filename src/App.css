@@ -222,8 +222,9 @@ body::before {
 }
 
 section {
-  overflow-x: hidden;
+  overflow: hidden;
   margin-bottom: calc(var(--base-size) * 10);
+  scroll-padding: calc(var(--base-size) * 8);
 }
 
 .title {
@@ -421,7 +422,8 @@ label {
 /* Reveal Animation */
 .reveal {
   opacity: 0;
-  transition: var(--animation-time) 300ms;
+  transition: opacity var(--animation-time) 300ms,
+    transform var(--animation-time) 400ms;
 }
 
 .reveal.show-animation {

@@ -15,16 +15,16 @@ function Hero() {
     <section id="hero" className="hero">
       <Container>
         <div className="info">
-          <div className="circle-image"></div>
-          <h5>Hi, I'm Rendi</h5>
-          <h1>
+          <div className="circle-image reveal"></div>
+          <h5 className="reveal">Hi, I'm Rendi</h5>
+          <h1 className="reveal">
             I'm a Web <span>Developer</span>
           </h1>
-          <p>
+          <p className="reveal">
             I specialize in translating design concepts into code, crafting
             interactive web experiences across devices and platforms
           </p>
-          <PrimaryButton text="Contact Me" />
+          <PrimaryButton text="Contact Me" className="reveal" />
         </div>
       </Container>
     </section>

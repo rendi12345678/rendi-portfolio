@@ -7,7 +7,7 @@ function LinkItem({ to, text, delay }) {
   useDelay({ delay, ref: liRef });
 
   return (
-    <li ref={liRef}>
+    <li ref={liRef} className="reveal">
       <HashLink to={to} smooth>
         {text}
       </HashLink>

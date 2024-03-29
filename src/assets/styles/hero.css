@@ -37,7 +37,8 @@
 .hero h5,
 .hero p,
 .hero button {
-  animation: slideToTop 1s calc(100ms * var(--delay)) forwards;
+  transition-delay: calc(100ms * var(--delay));
+  transform: translateY(100%);
 }
 
 .hero .info span {
@@ -66,17 +67,5 @@
 @media (width < 430px) {
   .hero .info p {
     max-width: 43ch;
-  }
-}
-
-@keyframes slideToTop {
-  0% {
-    transform: translateY(var(--translate-size));
-    opacity: 0;
-  }
-
-  100% {
-    transform: translate(0);
-    opacity: 1;
   }
 }

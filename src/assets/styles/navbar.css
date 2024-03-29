@@ -27,10 +27,10 @@ header button {
   margin: 0;
 }
 
-header h3 {
+header nav h3 {
   margin-bottom: 0;
   z-index: 999;
-  animation: slideToRight var(--animation-time) forwards;
+  transform: translateX(-100%);
 }
 
 header nav ul {
@@ -43,8 +43,8 @@ header nav ul {
 }
 
 header nav ul li {
-  animation: slideToRight var(--animation-time) calc(var(--delay) * 100ms)
-    forwards;
+  transform: translateX(-100%);
+  transition-delay: calc(var(--delay) * 100ms) !important;
 }
 
 header .hamburger-menu {
@@ -71,36 +71,10 @@ header .container .close-nav-btn {
   display: none;
 }
 
-@keyframes slideToLeft {
-  0% {
-    transform: translateX(var(--translate-size));
-    opacity: 0;
-  }
-
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideToRight {
-  0% {
-    transform: translateX(var(--translate-size-min));
-    opacity: 0;
-  }
-
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
-
 @media (width < 992px) {
   header .hamburger-menu {
     display: flex;
     z-index: 9999;
-    animation: slideToRight var(--animation-time) calc(var(--delay) * 100ms)
-      forwards;
     transition: var(--animation-time);
   }
 

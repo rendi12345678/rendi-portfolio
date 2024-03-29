@@ -6,7 +6,7 @@
 }
 
 .contact .container .title {
-  transform: translateY(var(--translate-size-min));
+  transform: translateX(var(--translate-size-min));
 }
 
 .contact .container .list-contact-and-maps {
@@ -40,7 +40,7 @@
   gap: calc(var(--base-size) * 2);
   grid-template-columns: auto 1fr;
   align-items: center;
-  transform: translateY(var(--translate-size-min));
+  transform: translateX(var(--translate-size-min));
   transition-delay: calc(var(--delay) * 100ms);
 }
 
