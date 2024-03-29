@@ -3,11 +3,7 @@ section.about .container {
   grid-template-columns: 0.4fr 0.6fr;
   align-items: center;
   gap: calc(var(--base-size) * 2);
-}
-
-.about .about-image {
-  width: 100%;
-  transform: translateX(-100%);
+  overflow: hidden;
 }
 
 .about .title {
@@ -24,18 +20,17 @@ section.about .container {
   transition-delay: calc(100ms * var(--delay));
 }
 
-.about .about-image.show-animation,
-.about .title.show-animation,
-.about p.show-animation {
-  transform: translate(0);
+.about .about-image .about-image {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about .about-image img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  transform: translateX(-100%);
   object-fit: cover;
-  box-sizing: border-box;
+  aspect-ratio: 1 / 1;
   object-position: center 15%;
+  width: 100%;
 }
 
 @media (width < 768px) {

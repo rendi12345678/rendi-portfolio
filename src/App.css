@@ -230,10 +230,6 @@ section {
   width: 100%;
 }
 
-.title.show-animation {
-  transform: translate(0);
-}
-
 .title h5 {
   color: var(--accent-color);
 }
