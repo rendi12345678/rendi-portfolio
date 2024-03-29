@@ -210,6 +210,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
+  overflow-x: hidden !important;
 }
 
 .container {
@@ -217,6 +218,7 @@ body::before {
   width: 100%;
   max-width: var(--max-width);
   padding: 0 var(--base-horizontal-fluid-size);
+  overflow-x: hidden !important;
 }
 
 section {

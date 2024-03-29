@@ -64,14 +64,23 @@
 }
 
 @media (width < 768px) {
+  .contact .container .title {
+    transform: translateY(0);
+    transform: translateX(var(--translate-size-min));
+  }
+
   .contact .container .list-contact-and-maps {
     grid-template-columns: 1fr;
   }
 
   .contact .container .list-contact-and-maps .maps {
     order: 1;
-    transform: translateX(0);
-    transform: translateY(var(--translate-size-min));
+    transform: translateX(var(--translate-size));
+  }
+
+  .contact .container .list-contacts li {
+    transform: translateY(0);
+    transform: translateX(var(--translate-size-min));
   }
 
   .contact .container .list-contact-and-maps .info {
