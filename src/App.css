@@ -140,7 +140,7 @@ table {
   --h1: clamp(3rem, 3.2vw, 3.2rem);
   --column-gap: clamp(2rem, 4.2vw, 4.2rem);
   --h2: clamp(2.4rem, 3.2vw, 3rem);
-  --accent-color: hsl(217, 93%, 47%);
+  --accent-color: hsl(226.86, 70.71%, 46.86%);
   --primary-color: hsl(0, 0%, 5%);
   --secondary-color: linear-gradient(
     to bottom right,
@@ -154,7 +154,7 @@ table {
   --headings-color: hsl(0, 0%, 100%);
   --body-color: hsl(0, 0%, 80%);
   --input-color: #fff;
-  --hover-color: rgba(255, 255, 255, 0.15);
+  --hover-color: hsl(217, 93%, 47%);
   --border-color: rgba(255, 255, 255, 0.15);
   --h3: clamp(2.2rem, 2.4vw, 2.4rem);
   --h4: clamp(1.6rem, 2vw, 2rem);
@@ -224,7 +224,6 @@ body::before {
 section {
   overflow: hidden;
   margin-bottom: calc(var(--base-size) * 10);
-  scroll-padding: calc(var(--base-size) * 8);
 }
 
 .title {
@@ -350,28 +349,28 @@ button {
   transition: 300ms;
 }
 
-button.big-size-btn {
+.big-size-btn {
   padding: 1.6rem 2.6rem;
 }
 
-button.medium-size-btn {
+.medium-size-btn {
   padding: 1.2rem 2.2rem;
 }
 
-button.small-size-btn {
+.small-size-btn {
   padding: 0.8rem 1.8rem;
 }
 
-button.blue-btn {
-  background: var(--accent-color);
+.blue-btn {
+  border: 0.2rem solid var(--contrast-color);
+  background-color: transparent;
+  color: var(--contrast-color);
 }
 
-button:hover {
-  filter: brightness(90%);
-}
-
-button:active {
-  transform: scale(0.95);
+.blue-btn:hover {
+  border: 0.2rem solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
 }
 
 /* Miscellaneous */
@@ -422,11 +421,13 @@ label {
 /* Reveal Animation */
 .reveal {
   opacity: 0;
-  transition: opacity var(--animation-time) 300ms,
-    transform var(--animation-time) 400ms;
+  transition: opacity var(--animation-time)
+      calc(var(--delay, 3) * 100ms + 200ms),
+    transform var(--animation-time) calc(var(--delay, 3) * 100ms),
+    background-color 300ms;
 }
 
 .reveal.show-animation {
-  opacity: 1;
+  opacity: 1 !important;
   transform: translate(0) !important;
 }

@@ -62,7 +62,6 @@ function ListPortfolio() {
             description={description}
             imageUrl={imageUrl}
             linkdemo={linkDemo}
-            className="reveal"
           />
         </SwiperSlide>
       ))}
