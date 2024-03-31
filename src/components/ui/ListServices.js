@@ -11,7 +11,7 @@ const listServices = [
   {
     title: "Responsive Website",
     description:
-      "Creating seamless cross-device experiences with responsive design, utilizing fluid layouts, flexible grids, and media queries for a modern user experience",
+      "Crafting seamless cross-device experiences through responsive design, which utilizes fluid layouts, flexible grids, and media queries",
   },
   {
     title: "Website Optimization",

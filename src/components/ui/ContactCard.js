@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import useDelay from "../../hooks/useDelay";
 
-function ContactCard({ icon, text, delay }) {
+function ContactCard({ icon, text, delay, type, url }) {
   const liRef = useRef(null);
   useDelay({ delay, ref: liRef });
 
@@ -10,7 +10,7 @@ function ContactCard({ icon, text, delay }) {
       <div className="icon">
         <img src={icon} alt="Icon" />
       </div>
-      <p>{text}</p>
+      {type === "linkedin" ? <a href={url}>{text}</a> : <p>{text}</p>}
     </li>
   );
 }

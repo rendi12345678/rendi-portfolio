@@ -6,7 +6,7 @@ import ListPortfolio from "./../ui/ListPortfolio";
 
 function Portfolio() {
   return (
-    <section className="portfolio" id="portfolio">
+    <section className="portfolio reveal" id="portfolio">
       <Container>
         <Title
           title="My Portfolio"

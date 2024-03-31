@@ -9,7 +9,7 @@ function Contacts() {
   const { contactRef } = useAppContext();
 
   return (
-    <section className="contact" id="contact" ref={contactRef}>
+    <section className="contact reveal" id="contact" ref={contactRef}>
       <Container>
         <div className="list-contact-and-maps">
           <ListContacts />

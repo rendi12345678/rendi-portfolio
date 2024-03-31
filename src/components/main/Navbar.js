@@ -26,10 +26,10 @@ const linkItems = [
     to: "/#portfolio",
     text: "Portfolio",
   },
-  {
-    to: "/#testimonials",
-    text: "Testimonials",
-  },
+  // {
+  //   to: "/#testimonials",
+  //   text: "Testimonials",
+  // },
   {
     to: "/#contact",
     text: "Contact",
@@ -40,7 +40,7 @@ function Navbar() {
   return (
     <header>
       <Container>
-        <nav>
+        <nav className="reveal">
           <h3 className="reveal">Rendi's Portfolio</h3>
           <HamburgerMenu />
           <NavList>

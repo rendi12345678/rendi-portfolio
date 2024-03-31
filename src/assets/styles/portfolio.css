@@ -27,9 +27,16 @@
   margin-bottom: calc(var(--base-size));
 }
 
-.portfolio .container .list-portfolio.reveal,
+.portfolio .container .list-portfolio .item.reveal {
+  transform: translateX(-100%);
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--body-color) !important;
+}
+
 .portfolio .container .title {
-  transform: translateY(var(--translate-size));
+  transform: translateX(var(--translate-size));
 }
 
 .portfolio .container .list-portfolio img {

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
+import useDelay from "../../hooks/useDelay";
 
-function ProjectCard({ imageUrl, title, linkdemo, description }) {
+function ProjectCard({ imageUrl, title, linkdemo, description, delay }) {
+  const itemRef = useRef();
+  useDelay({ ref: itemRef, delay });
+
   return (
-    <>
+    <div className="item reveal" ref={itemRef}>
       <figure className="project-image">
         <img src={imageUrl} alt="Project" />
       </figure>
@@ -16,7 +20,7 @@ function ProjectCard({ imageUrl, title, linkdemo, description }) {
         </h5>
         <p className="project-description">{description}</p>
       </div>
-    </>
+    </div>
   );
 }
 

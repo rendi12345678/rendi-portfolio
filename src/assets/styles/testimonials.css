@@ -6,7 +6,7 @@
 }
 
 .testimonials .container .title {
-  transform: translateX(var(--translate-size));
+  transform: translateX(var(--translate-size-min));
 }
 
 .testimonials .container .list-testimonials {
@@ -17,7 +17,7 @@
 }
 
 .testimonials .container .list-testimonials li {
-  transform: translateX(var(--translate-size-min));
+  transform: translateX(100%);
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius);

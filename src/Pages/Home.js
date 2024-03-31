@@ -6,7 +6,6 @@ import Hero from "../components/main/Hero";
 import Portfolio from "../components/main/Portfolio";
 import Services from "../components/main/Services";
 import Skills from "../components/main/Skills";
-import Testimonials from "../components/main/Testimonials";
 
 const Home = () => {
   return (
@@ -16,7 +15,7 @@ const Home = () => {
       <Services />
       <Skills />
       <Portfolio />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contacts />
       <Footer />
     </>

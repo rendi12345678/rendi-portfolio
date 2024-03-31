@@ -1,45 +1,41 @@
 import React, { Suspense, lazy } from "react";
+import useMaps from "../../hooks/useMaps";
+import useNavigatorOnLine from "../../hooks/useNavigatorOnline";
+import MapsLoading from "./MapsLoading";
+import MapsOffline from "./MapsOffline";
 const BingMapsReact = lazy(() => import("bingmaps-react"));
 
 function Maps() {
-  const apiKey = process.env.REACT_APP_API_KEY;
-  const initialLocation = {
-    latitude: -7.580784715587559,
-    longitude: 112.13238644047685,
-  };
+  const { apiKey, initialLocation, pushPins } = useMaps();
+  const isOnline = useNavigatorOnLine();
 
-  const pushPin = {
-    center: {
-      latitude: initialLocation.latitude,
-      longitude: initialLocation.longitude,
-    },
-    options: {
-      title: "Rendi Virgantara Setiawan Home",
-    },
-  };
+  console.log(isOnline);
 
-  const pushPins = [pushPin];
   return (
     <div className="maps reveal">
-      <Suspense fallback={<p>Loading...</p>}>
-        <BingMapsReact
-          bingMapsKey={apiKey}
-          height="100%"
-          width="100%"
-          mapOptions={{
-            navigationBarMode: "square",
-          }}
-          pushPins={pushPins}
-          viewOptions={{
-            center: {
-              latitude: initialLocation.latitude,
-              longitude: initialLocation.longitude,
-            },
-            mapTypeId: "aerial",
-            zoom: 10,
-          }}
-        />
-      </Suspense>
+      {isOnline ? (
+        <Suspense fallback={<MapsLoading />}>
+          <BingMapsReact
+            bingMapsKey={apiKey}
+            height="100%"
+            width="100%"
+            mapOptions={{
+              navigationBarMode: "square",
+            }}
+            pushPins={pushPins}
+            viewOptions={{
+              center: {
+                latitude: initialLocation.latitude,
+                longitude: initialLocation.longitude,
+              },
+              mapTypeId: "aerial",
+              zoom: 10,
+            }}
+          />
+        </Suspense>
+      ) : (
+        <MapsOffline />
+      )}
     </div>
   );
 }

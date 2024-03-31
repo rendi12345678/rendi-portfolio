@@ -6,7 +6,7 @@ import Title from "../ui/Title";
 
 function Services() {
   return (
-    <section className="services" id="services">
+    <section className="services reveal" id="services">
       <Container>
         <Title
           title="My Services"

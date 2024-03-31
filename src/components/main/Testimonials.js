@@ -6,7 +6,7 @@ import Title from "../ui/Title";
 
 function Testimonials() {
   return (
-    <section className="testimonials" id="testimonials">
+    <section className="testimonials reveal" id="testimonials">
       <Container>
         <Title
           title="Testimonials"

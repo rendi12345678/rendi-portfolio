@@ -6,7 +6,7 @@ function useRevealAnimations() {
     reveals.forEach((reveal) => {
       const windowHeight = window.innerHeight;
       const revealTop = reveal.getBoundingClientRect().top;
-      const revealPoint = 150;
+      const revealPoint = 120;
 
       if (revealTop > windowHeight - revealPoint)
         return reveal.classList.remove("show-animation");

@@ -37,7 +37,7 @@ const listPotfolio = [
 function ListPortfolio() {
   return (
     <Swiper
-      className="list-portfolio reveal"
+      className="list-portfolio"
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={0}
       pagination={{ clickable: true }}
@@ -56,12 +56,13 @@ function ListPortfolio() {
       }}
     >
       {listPotfolio.map(({ title, description, imageUrl, linkDemo }, index) => (
-        <SwiperSlide className="item" key={index}>
+        <SwiperSlide key={index}>
           <ProjectCard
             title={title}
             description={description}
             imageUrl={imageUrl}
             linkdemo={linkDemo}
+            delay={index}
           />
         </SwiperSlide>
       ))}

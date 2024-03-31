@@ -9,7 +9,7 @@
   transform: translateX(var(--translate-size-min));
 }
 
-.contact .container .list-contact-and-maps {
+.list-contact-and-maps {
   display: grid;
   align-items: center;
   text-align: left;
@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-.contact .container .list-contact-and-maps .maps {
+.maps {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: var(--border-radius);
@@ -27,7 +27,22 @@
   transform: translateX(var(--translate-size));
 }
 
-.contact .container .list-contacts {
+.maps-offline {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-color);
+}
+
+.maps-offline img {
+  --image-size: 20rem;
+  height: var(--image-size);
+  width: var(--image-size);
+}
+
+.list-contacts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: calc(var(--base-size) * 2);
@@ -35,7 +50,7 @@
   width: 100%;
 }
 
-.contact .container .list-contacts li {
+.list-contacts li {
   display: grid;
   gap: calc(var(--base-size) * 2);
   grid-template-columns: auto 1fr;
@@ -44,7 +59,7 @@
   transition-delay: calc(var(--delay) * 100ms);
 }
 
-.contact .container .list-contacts li .icon {
+.list-contacts li .icon {
   width: 6rem;
   height: 6rem;
   padding: calc(var(--base-size));
@@ -56,7 +71,11 @@
   background: var(--secondary-color);
 }
 
-.contact .container .list-contacts li img {
+.list-contacts li a {
+  text-decoration: underline;
+}
+
+.list-contacts li img {
   width: 100%;
   box-sizing: border-box;
   height: 100%;
@@ -69,25 +88,25 @@
     transform: translateX(var(--translate-size-min));
   }
 
-  .contact .container .list-contact-and-maps {
+  .list-contact-and-maps {
     grid-template-columns: 1fr;
   }
 
-  .contact .container .list-contact-and-maps .maps {
+  .maps {
     order: 1;
     transform: translateX(var(--translate-size));
   }
 
-  .contact .container .list-contacts li {
+  .list-contacts li {
     transform: translateY(0);
     transform: translateX(var(--translate-size-min));
   }
 
-  .contact .container .list-contact-and-maps .info {
+  .list-contact-and-maps .info {
     order: 2;
   }
 
-  .contact .container .list-contacts li .icon {
+  .list-contacts li .icon {
     width: 5rem;
     height: 5rem;
   }

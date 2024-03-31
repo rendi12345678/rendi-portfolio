@@ -130,17 +130,13 @@ table {
   border-spacing: 0;
 }
 
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
-
 /* Root */
 :root {
   font-size: 62.5%;
   --h1: clamp(3rem, 3.2vw, 3.2rem);
   --column-gap: clamp(2rem, 4.2vw, 4.2rem);
   --h2: clamp(2.4rem, 3.2vw, 3rem);
-  --accent-color: hsl(226.86, 70.71%, 46.86%);
+  --accent-color: hsl(226.86, 70.71%, 51%);
   --primary-color: hsl(0, 0%, 5%);
   --secondary-color: linear-gradient(
     to bottom right,
@@ -154,29 +150,23 @@ table {
   --headings-color: hsl(0, 0%, 100%);
   --body-color: hsl(0, 0%, 80%);
   --input-color: #fff;
-  --hover-color: hsl(217, 93%, 47%);
-  --border-color: rgba(255, 255, 255, 0.15);
   --h3: clamp(2.2rem, 2.4vw, 2.4rem);
   --h4: clamp(1.6rem, 2vw, 2rem);
   --h5: clamp(1.4rem, 1.6vw, 1.6rem);
   --body-text: clamp(1.4rem, 1.6vw, 1.6rem);
   --max-width: 115rem;
   --border-radius: 1.5rem;
-  --base-size: clamp(1rem, 1.5vw, 1.5rem);
-  --box-shadow: 0.1rem 0.1rem 0.5rem rgba(255, 255, 255, 0.25);
+  --base-size: clamp(1.3rem, 1.5vw, 1.5rem);
   --base-vertical-fluid-size: 5svh;
   --translate-size: 20rem;
   --translate-size-min: -20rem;
   --base-horizontal-fluid-size: 5vw;
-  --animation-time: 1.3s;
+  --animation-time: 1s;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --box-shadow: 0.1rem 0.1rem 0.5rem rgba(255, 255, 255, 0.15);
     --date-picker-color: invert(70%);
-    --hover-color: rgba(255, 255, 255, 0.15);
-    --border-color: rgba(255, 255, 255, 0.15);
     --contrast-color: #fff;
     --headings-color: hsl(0, 0%, 100%);
     --body-color: hsl(0, 0%, 80%);
@@ -188,6 +178,20 @@ table {
     --primary-color: hsl(0, 0%, 5%);
     --input-color: #1d1d1d;
   }
+}
+
+html {
+  scroll-padding-top: calc(var(--base-size) * 2);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(./assets/fonts/Open_Sans/static/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url(./assets/fonts/Source_Sans_3/static/SourceSans3-Medium.ttf);
 }
 
 /* Global */
@@ -223,7 +227,7 @@ body::before {
 
 section {
   overflow: hidden;
-  margin-bottom: calc(var(--base-size) * 10);
+  margin-bottom: calc(var(--base-size) * 11);
 }
 
 .title {
@@ -252,7 +256,6 @@ placeholder {
   font-size: var(--body-text);
   line-height: 1.5;
   color: var(--body-color);
-  font-weight: 400;
 }
 
 p {
@@ -267,7 +270,6 @@ h4,
 h5,
 .title p {
   font-family: "Open Sans", sans-serif;
-  font-weight: 700;
   line-height: 1.1;
   box-sizing: border-box;
 }
@@ -422,7 +424,7 @@ label {
 .reveal {
   opacity: 0;
   transition: opacity var(--animation-time)
-      calc(var(--delay, 3) * 100ms + 200ms),
+      calc(var(--delay, 3) * 100ms + 100ms),
     transform var(--animation-time) calc(var(--delay, 3) * 100ms),
     background-color 300ms;
 }
