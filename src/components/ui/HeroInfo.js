@@ -4,11 +4,11 @@ import useButtons from "./../../hooks/useButtons";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 function HeroInfo() {
-  const { contactRef } = useAppContext();
+  const { aboutRef } = useAppContext();
   const { PrimaryButton } = useButtons();
   const scrollToElement = () => {
-    if (contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
@@ -24,8 +24,8 @@ function HeroInfo() {
       </p>
       <SocialMediaLinks />
       <PrimaryButton
-        text="Contact Me"
-        className="contact-btn reveal"
+        text="Tell Me More"
+        className="cta-btn reveal"
         onClick={scrollToElement}
       />
     </div>

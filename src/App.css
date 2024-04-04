@@ -137,26 +137,22 @@ table {
   --column-gap: clamp(2rem, 4.2vw, 4.2rem);
   --h2: clamp(2.4rem, 3.2vw, 3rem);
   --accent-color: hsl(226.86, 70.71%, 51%);
-  --primary-color: hsl(0, 0%, 5%);
-  --secondary-color: linear-gradient(
-    to bottom right,
-    hsl(217, 93%, 12%),
-    var(--primary-color)
-  );
+  --primary-color: hsl(0, 0%, 6%);
+  --secondary-color: hsl(0, 0%, 10%);
   --contrast-color: hsl(0, 0%, 100%);
   --contrast-border-color: #fff;
   --date-picker-color: invert(30%);
   --button-color: #fff;
   --headings-color: hsl(0, 0%, 100%);
-  --body-color: hsl(0, 0%, 80%);
+  --body-color: hsl(0, 0%, 90%);
   --input-color: #fff;
   --h3: clamp(2.2rem, 2.4vw, 2.4rem);
-  --h4: clamp(1.6rem, 2vw, 2rem);
-  --h5: clamp(1.4rem, 1.6vw, 1.6rem);
-  --body-text: clamp(1.4rem, 1.6vw, 1.6rem);
+  --h4: clamp(1.8rem, 2vw, 2rem);
+  --h5: clamp(1.6rem, 1.8vw, 1.8rem);
+  --body-text: clamp(1.6rem, 1.8vw, 1.8rem);
   --max-width: 115rem;
   --border-radius: 1.5rem;
-  --base-size: clamp(1.3rem, 1.5vw, 1.5rem);
+  --base-size: 1.5rem;
   --base-vertical-fluid-size: 5svh;
   --translate-size: 20rem;
   --translate-size-min: -20rem;
@@ -169,13 +165,9 @@ table {
     --date-picker-color: invert(70%);
     --contrast-color: #fff;
     --headings-color: hsl(0, 0%, 100%);
-    --body-color: hsl(0, 0%, 80%);
-    --secondary-color: linear-gradient(
-      to bottom right,
-      hsl(217, 93%, 12%),
-      var(--primary-color)
-    );
-    --primary-color: hsl(0, 0%, 5%);
+    --body-color: hsl(0, 0%, 90%);
+    --primary-color: hsl(0, 0%, 6%);
+    --secondary-color: hsl(0, 0%, 10%);
     --input-color: #1d1d1d;
   }
 }
@@ -202,19 +194,6 @@ body {
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
-  overflow-x: hidden !important;
-}
-
-body::before {
-  content: "";
-  background: linear-gradient(
-    to bottom right,
-    hsl(217, 93%, 12%),
-    var(--primary-color)
-  );
-  position: fixed;
-  inset: 0;
-  z-index: -1;
   overflow-x: hidden !important;
 }
 

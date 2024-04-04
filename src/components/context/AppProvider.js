@@ -4,9 +4,9 @@ import { createContext } from "use-context-selector";
 export const AppContext = createContext(null);
 
 function AppProvider({ children }) {
-  const contactRef = useRef(null);
+  const aboutRef = useRef(null);
 
-  const contextValues = { contactRef };
+  const contextValues = { aboutRef };
   return (
     <AppContext.Provider value={contextValues}>{children}</AppContext.Provider>
   );

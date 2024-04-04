@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-@media (width < 768px) {
+@media (width <= 768px) {
   .portfolio .container .list-portfolio.reveal,
   .portfolio .container .title {
     transform: translateY(0);

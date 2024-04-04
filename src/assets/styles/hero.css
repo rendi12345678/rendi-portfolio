@@ -65,7 +65,7 @@
 .hero-sub-title,
 .hero-title,
 .hero-description,
-.contact-btn,
+.cta-btn,
 .social-media-links {
   transform: translateY(100%);
 }
@@ -89,7 +89,7 @@
   text-align: center;
 }
 
-.contact-btn {
+.cta-btn {
   --delay: 5;
 }
 

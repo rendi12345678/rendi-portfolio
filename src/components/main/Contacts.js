@@ -1,15 +1,12 @@
 import React from "react";
 import "../../assets/styles/contacts.css";
-import useAppContext from "../../hooks/useAppContext";
 import ListContacts from "../ui/ListContacts";
 import Maps from "../ui/Maps";
 import Container from "./../ui/Container";
 
 function Contacts() {
-  const { contactRef } = useAppContext();
-
   return (
-    <section className="contact reveal" id="contact" ref={contactRef}>
+    <section className="contact reveal" id="contact">
       <Container>
         <div className="list-contact-and-maps">
           <ListContacts />

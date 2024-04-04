@@ -44,7 +44,6 @@
 
 .list-contacts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: calc(var(--base-size) * 2);
   text-align: left;
   width: 100%;
@@ -73,6 +72,8 @@
 
 .list-contacts li a {
   text-decoration: underline;
+  display: inline-block;
+  width: fit-content;
 }
 
 .list-contacts li img {
@@ -82,7 +83,7 @@
   border-radius: 0;
 }
 
-@media (width < 768px) {
+@media (width <= 768px) {
   .contact .container .title {
     transform: translateY(0);
     transform: translateX(var(--translate-size-min));
@@ -104,10 +105,5 @@
 
   .list-contact-and-maps .info {
     order: 2;
-  }
-
-  .list-contacts li .icon {
-    width: 5rem;
-    height: 5rem;
   }
 }
