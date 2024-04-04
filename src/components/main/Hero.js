@@ -5,7 +5,7 @@ import HeroInfo from "../ui/HeroInfo";
 
 function Hero() {
   return (
-    <section id="hero reveal" className="hero">
+    <section id="hero" className="hero">
       <Container>
         <HeroInfo />
       </Container>

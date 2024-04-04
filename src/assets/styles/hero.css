@@ -8,7 +8,7 @@
   position: absolute;
   inset: 0;
   height: 100svh;
-  background: url(/public/images/bg1.jpg) center / cover no-repeat;
+  background: url(/public/images/bg1.webp) center / cover no-repeat;
   z-index: -11;
   filter: brightness(40%);
 }

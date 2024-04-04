@@ -18,10 +18,7 @@ function App() {
   useRevealAnimations();
 
   return (
-    <SkeletonTheme
-      highlightColor="hsla(226.86, 70.71%, 51%, .15)"
-      baseColor="hsla(0, 0%, 5%, .15)"
-    >
+    <SkeletonTheme highlightColor="#000000" baseColor="#1a1a1a">
       <AppProvider>
         <NavbarProvider>
           <Navbar />

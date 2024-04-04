@@ -5,9 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import ProjectCard from "./ProjectCard";
 
 const listPotfolio = [
@@ -37,12 +35,10 @@ const listPotfolio = [
 function ListPortfolio() {
   return (
     <Swiper
-      className="list-portfolio"
+      className="list-portfolio reveal"
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={0}
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
       breakpoints={{
         640: {
           slidesPerView: 1,

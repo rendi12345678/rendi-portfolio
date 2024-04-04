@@ -137,8 +137,8 @@ table {
   --column-gap: clamp(2rem, 4.2vw, 4.2rem);
   --h2: clamp(2.4rem, 3.2vw, 3rem);
   --accent-color: hsl(226.86, 70.71%, 51%);
-  --primary-color: hsl(0, 0%, 6%);
-  --secondary-color: hsl(0, 0%, 10%);
+  --primary-color: #000000;
+  --secondary-color: #1a1a1a;
   --contrast-color: hsl(0, 0%, 100%);
   --contrast-border-color: #fff;
   --date-picker-color: invert(30%);
