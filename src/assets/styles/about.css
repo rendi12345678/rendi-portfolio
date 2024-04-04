@@ -19,8 +19,9 @@ section.about .container {
   transition-delay: calc(100ms * var(--delay));
 }
 
-.about .about-image .about-image {
+.about .about-image {
   width: 100%;
+  border-radius: var(--border-radius);
   box-sizing: border-box;
 }
 

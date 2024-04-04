@@ -1,6 +1,5 @@
 header {
   position: absolute;
-  background: var(--primary-color);
   top: 0;
   left: 0;
   right: 0;
@@ -11,10 +10,10 @@ header {
 header .container {
   height: 100%;
   width: 100%;
+  padding: 0;
 }
 
 header nav {
-  background: var(--primary-color);
   display: flex;
   justify-content: space-between;
   padding: calc(var(--base-vertical-fluid-size) / 2)
@@ -100,7 +99,7 @@ header .container .close-nav-btn {
     height: 100svh;
     width: 100%;
     transition: 800ms;
-    margin-top: 8rem;
+    padding-top: 8rem;
     z-index: 9;
   }
 

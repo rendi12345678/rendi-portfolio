@@ -11,15 +11,16 @@
 
 .services .container .list-services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: calc(var(--base-size) * 2);
 }
 
 .services .container .list-services li {
   text-align: left;
   padding: calc(var(--base-size) * 2);
-  background: var(--secondary-color);
+  background: var(--gradient-color);
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   transition-delay: calc(var(--delay) * 100ms);
   transform: translateX(-100%);
 }

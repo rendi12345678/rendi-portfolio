@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../assets/styles/portfolio.css";
 import Container from "../ui/Container";
 import Title from "../ui/Title";
 import ListPortfolio from "./../ui/ListPortfolio";
 
 function Portfolio() {
+  useEffect(() => {
+    document.querySelector(".swiper-pagination-bullet").classList.add("reveal");
+  }, []);
+
   return (
     <section className="portfolio reveal" id="portfolio">
       <Container>

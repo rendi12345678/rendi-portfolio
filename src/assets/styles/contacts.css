@@ -67,7 +67,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--secondary-color);
+  background: var(--gradient-color);
+  box-shadow: var(--shadow);
 }
 
 .list-contacts li a {
