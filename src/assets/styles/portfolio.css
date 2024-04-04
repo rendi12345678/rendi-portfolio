@@ -35,7 +35,7 @@
   background-color: var(--body-color) !important;
 }
 
-.item.reveal .portfolio .container .title {
+.portfolio .title {
   transform: translateY(var(--translate-size));
 }
 
