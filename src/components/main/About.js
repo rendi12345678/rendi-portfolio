@@ -10,9 +10,9 @@ function About() {
   return (
     <section className="about reveal" id="about" ref={aboutRef}>
       <Container>
-        <div className="about-image">
-          <img src="/images/rendi1.webp" alt="Rendi" className="reveal" />
-        </div>
+        <picture className="about-image">
+          <img src="/images/rendi1-650px.webp" alt="Rendi" className="reveal" />
+        </picture>
         <div className="about-info">
           <Title
             title="About Me"
