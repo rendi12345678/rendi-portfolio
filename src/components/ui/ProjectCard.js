@@ -1,14 +1,15 @@
 import React, { useRef } from "react";
 import useDelay from "../../hooks/useDelay";
+import ImageComponent from "./ImageComponent";
 
-function ProjectCard({ imageUrl, title, linkdemo, description, delay }) {
+function ProjectCard({ imageUrl, title, linkdemo, description, delay, hash }) {
   const itemRef = useRef();
   useDelay({ ref: itemRef, delay });
 
   return (
     <div className="item reveal" ref={itemRef}>
       <figure className="project-image">
-        <img src={imageUrl} alt="Project" />
+        <ImageComponent src={imageUrl} hash={hash} alt="Project" />
       </figure>
       <div className="project-details">
         <h4>{title}</h4>

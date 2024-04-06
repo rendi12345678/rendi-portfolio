@@ -1,6 +1,7 @@
 import React from "react";
 import "../../assets/styles/about.css";
 import Container from "../ui/Container";
+import ImageComponent from "../ui/ImageComponent";
 import Title from "../ui/Title";
 import useAppContext from "./../../hooks/useAppContext";
 
@@ -10,8 +11,12 @@ function About() {
   return (
     <section className="about reveal" id="about" ref={aboutRef}>
       <Container>
-        <picture className="about-image">
-          <img src="/images/rendi1-650px.webp" alt="Rendi" className="reveal" />
+        <picture className="about-image reveal">
+          <ImageComponent
+            src="/images/rendi1-650px.webp"
+            hash="LNHL$9WC0aj]00ofXVaz?]ax=;j]"
+            alt="Rendi"
+          />
         </picture>
         <div className="about-info">
           <Title
@@ -20,12 +25,14 @@ function About() {
             className="reveal"
           />
           <p className="reveal">
-            Hi, my name is Rendi Virgantara Setiawan. I am a web developer based
-            in Indonesia who is super passionate about coding and also loves
-            calisthenics. As a web developer, i help business owners get online
-            to get more customers. I do it because i love it and i am super
-            passionate about it. It makes me incredibly happy in life because i
-            can provide value to other people.
+            Hey there, I'm Rendi Virgantara Setiawan, a web developer based in
+            Indonesia, on a mission to blend my passion for coding with the joy
+            of calisthenics. When I'm not perfecting my push-ups, you'll find me
+            crafting digital experiences as a web wizard. I'm not just
+            passionate about coding. I'm obsessed! And what fuels my fire?
+            Helping coffee shop owners thrive in the digital realm by building
+            captivating websites that bring their brews to the world. Let's turn
+            your coffee dreams into digital reality!
           </p>
         </div>
       </Container>

@@ -17,12 +17,6 @@
   border-radius: 0;
 }
 
-.blur-hash {
-  position: absolute;
-  inset: 0;
-  height: 100svh;
-}
-
 .hero .container {
   display: grid;
   align-items: center;
