@@ -30,7 +30,7 @@
 
 .project-image div {
   width: 100%;
-  height: clamp(20rem, 30vw, 30rem) !important;
+  height: clamp(23rem, 30vw, 30rem) !important;
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -45,7 +45,8 @@
 
 .list-portfolio img {
   width: 100%;
-  height: clamp(20rem, 30vw, 30rem) !important;
+  object-fit: fill;
+  height: clamp(23rem, 30vw, 30rem) !important;
 }
 
 .list-portfolio .link-demo a {

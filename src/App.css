@@ -196,15 +196,15 @@ html {
 body {
   position: relative;
   width: 100vw;
-  background: var(--primary-color);
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
   overflow-x: hidden !important;
+  background: transparent;
 }
 
-body::after {
+body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -377,6 +377,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 img {
   border-radius: var(--border-radius);
   box-sizing: border-box;
+  object-fit: cover;
 }
 
 label {
