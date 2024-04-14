@@ -1,3 +1,5 @@
+@use "../utils/" as u;
+
 .skills .container {
   display: grid;
   justify-content: center;
@@ -8,7 +10,7 @@
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: calc(var(--base-size) * 2);
+  gap: calc(u.$base-size * 2);
 }
 
 .skills .container ul li {
@@ -17,13 +19,13 @@
 }
 
 .skills .container ul li div {
-  box-shadow: var(--shadow);
+  box-shadow: u.$shadow;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--gradient-color);
-  padding: calc(var(--base-size));
-  border-radius: var(--border-radius);
+  background: u.$gradient-color;
+  padding: calc(u.$base-size);
+  border-radius: u.$border-radius;
   width: 100%;
 }
 
@@ -33,5 +35,5 @@
 
 .skills .container .title {
   text-align: center;
-  transform: translateX(var(--translate-size-min));
+  transform: translateX(u.$translate-size-min);
 }

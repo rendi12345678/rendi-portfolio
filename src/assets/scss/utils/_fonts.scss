@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/Open_Sans/static/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url(../fonts/Source_Sans_3/static/SourceSans3-Medium.ttf);
+}
+
+$text-font: "Source Sans 3", sans-serif;
+$heading-font: "Open Sans", sans-serif;

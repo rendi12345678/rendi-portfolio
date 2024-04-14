@@ -1,5 +1,4 @@
 import React from "react";
-import "../../assets/styles/hero.css";
 import Container from "../ui/Container";
 import HeroImage from "../ui/HeroImage";
 import HeroInfo from "../ui/HeroInfo";

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "../../assets/styles/portfolio.css";
 import Container from "../ui/Container";
 import Title from "../ui/Title";
 import ListPortfolio from "./../ui/ListPortfolio";

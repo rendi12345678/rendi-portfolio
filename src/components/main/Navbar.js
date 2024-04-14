@@ -1,5 +1,4 @@
 import React from "react";
-import "../../assets/styles/navbar.css";
 import HamburgerMenu from "../ui/HamburgerMenu";
 import LinkItem from "../ui/LinkItem";
 import NavList from "../ui/NavList";

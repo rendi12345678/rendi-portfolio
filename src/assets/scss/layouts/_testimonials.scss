@@ -1,3 +1,5 @@
+@use "../utils/" as u;
+
 .testimonials .container {
   display: flex;
   flex-direction: column;
@@ -6,13 +8,13 @@
 }
 
 .testimonials .container .title {
-  transform: translateX(var(--translate-size-min));
+  transform: translateX(u.$translate-size-min);
 }
 
 .testimonials .container .list-testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: calc(var(--base-size) * 2);
+  gap: calc(u.$base-size * 2);
   text-align: left;
 }
 
@@ -20,17 +22,17 @@
   transform: translateX(100%);
   display: flex;
   flex-direction: column;
-  border-radius: var(--border-radius);
-  background: var(--secondary-color);
-  padding: calc(var(--base-size) * 2);
-  gap: calc(var(--base-size) * 1);
+  border-radius: u.$border-radius;
+  background: u.$secondary-color;
+  padding: calc(u.$base-size * 2);
+  gap: calc(u.$base-size * 1);
 }
 
 .testimonials .container .list-testimonials .client-profile {
   --size: 3.5rem;
   display: flex;
   align-items: center;
-  gap: calc(var(--base-size) * 1);
+  gap: calc(u.$base-size * 1);
 }
 
 .testimonials .container .list-testimonials .client-profile h5 {

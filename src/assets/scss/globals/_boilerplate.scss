@@ -1,0 +1,71 @@
+@use "../utils/" as u;
+
+/* Global */
+body {
+  position: relative;
+  width: 100vw;
+  text-size-adjust: none;
+  overflow-x: hidden;
+  background: transparent;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  height: 100svh;
+  background: u.$gradient-color;
+  z-index: -12;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: u.$max-width;
+  padding: 0 u.$base-horizontal-fluid-size;
+}
+
+section {
+  margin-bottom: calc(u.$base-size * 11);
+}
+
+/* Loading Animation */
+.loader {
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  border: 5px solid u.$contrast-color;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transition: opacity u.$animation-time calc(var(--delay, 3) * 100ms + 100ms),
+    transform u.$animation-time calc(var(--delay, 3) * 100ms),
+    background-color 300ms;
+}
+
+.reveal.show-animation {
+  opacity: 1 !important;
+  transform: translate(0) !important;
+}

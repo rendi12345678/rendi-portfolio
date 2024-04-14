@@ -1,5 +1,4 @@
 import React from "react";
-import "../../assets/styles/services.css";
 import Container from "../ui/Container";
 import ListServices from "../ui/ListServices";
 import Title from "../ui/Title";

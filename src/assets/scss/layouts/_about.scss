@@ -1,8 +1,10 @@
+@use "../utils" as u;
+
 section.about .container {
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
   align-items: center;
-  gap: calc(var(--base-size) * 2);
+  gap: calc(u.$base-size) * 2;
 }
 
 .about .title {
@@ -15,22 +17,22 @@ section.about .container {
 
 .about .title,
 .about p {
-  transform: translateY(var(--translate-size));
+  transform: translateY(u.$translate-size);
   transition-delay: calc(100ms * var(--delay));
 }
 
 .about .about-image {
-  transform: translateX(var(--translate-size-min));
+  transform: translateX(u.$translate-size-min);
   width: 100%;
   padding: 0;
   box-sizing: border-box;
-  border-radius: var(--border-radius);
+  border-radius: u.$border-radius;
   overflow: hidden;
 }
 
 .about-image div {
   aspect-ratio: 1 / 1;
-  border-radius: var(--border-radius);
+  border-radius: u.$border-radius;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -53,7 +55,6 @@ section.about .container {
 
   .about .title,
   .about p {
-    transform: translateY(0);
-    transform: translateX(var(--translate-size-min));
+    transform: translateX(u.$translate-size-min);
   }
 }

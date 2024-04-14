@@ -1,5 +1,4 @@
 import React from "react";
-import "../../assets/styles/skills.css";
 import Container from "../ui/Container";
 import ListSkills from "../ui/ListSkills";
 import Title from "../ui/Title";

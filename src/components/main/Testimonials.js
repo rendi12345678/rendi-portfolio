@@ -1,5 +1,4 @@
 import React from "react";
-import "../../assets/styles/testimonials.css";
 import Container from "../ui/Container";
 import ListTestimonials from "../ui/ListTestimonials";
 import Title from "../ui/Title";

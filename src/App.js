@@ -1,6 +1,6 @@
 import { SkeletonTheme } from "react-loading-skeleton";
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./assets/style/style.css";
 import AppProvider from "./components/context/AppProvider";
 import NavbarProvider from "./components/context/NavbarProvider";
 import Navbar from "./components/main/Navbar";

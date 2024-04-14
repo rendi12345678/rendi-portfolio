@@ -1,3 +1,5 @@
+@use "../utils/" as u;
+
 .services .container {
   display: flex;
   flex-direction: column;
@@ -6,21 +8,21 @@
 }
 
 .services .container .title {
-  transform: translateX(var(--translate-size));
+  transform: translateX(u.$translate-size);
 }
 
 .services .container .list-services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: calc(var(--base-size) * 2);
+  gap: calc(u.$base-size * 2);
 }
 
 .services .container .list-services li {
   text-align: left;
-  padding: calc(var(--base-size) * 2);
-  background: var(--gradient-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  padding: calc(u.$base-size * 2);
+  background: u.$gradient-color;
+  border-radius: u.$border-radius;
+  box-shadow: u.$shadow;
   transition-delay: calc(var(--delay) * 100ms);
   transform: translateX(-100%);
 }

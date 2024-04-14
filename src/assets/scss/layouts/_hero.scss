@@ -1,3 +1,5 @@
+@use "../utils/" as u;
+
 .hero {
   position: relative;
   height: 100svh;
@@ -27,12 +29,12 @@
 
 .social-media-links {
   --delay: 4;
-  --icon-size: 3rem;
+  --icon-size: 2.5rem;
   display: flex;
   align-content: center;
   justify-content: space-between;
-  gap: var(--base-size);
-  margin-top: var(--base-size);
+  gap: u.$base-size;
+  margin-top: u.$base-size;
   background: transparent;
   z-index: 99;
 }
@@ -44,12 +46,12 @@
 }
 
 .svg-wrapper g {
-  fill: var(--body-color);
+  fill: u.$body-color;
   transition: 300ms;
 }
 
 .svg-wrapper:hover g {
-  fill: var(--accent-color);
+  fill: u.$accent-color;
 }
 
 .svg-wrapper svg {
@@ -85,17 +87,16 @@
 }
 
 .hero-title span {
-  color: var(--accent-color);
+  color: u.$accent-color;
 }
 
 .circle-image {
   --delay: 0;
-  width: 7rem;
-  height: 7rem;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 50%;
-  background: url("/public/images/rendi1-650px.webp") center 15% / cover
-    no-repeat;
-  margin-bottom: calc(var(--base-size) * 2);
+  background: url("/public/images/rendi1-650px.webp") center / cover no-repeat;
+  margin-bottom: calc(u.$base-size * 2);
 }
 
 .hero-description {

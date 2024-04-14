@@ -1,3 +1,5 @@
+@use "../utils" as u;
+
 .contact .container {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,7 @@
 }
 
 .contact .container .title {
-  transform: translateX(var(--translate-size-min));
+  transform: translateX(u.$translate-size-min);
 }
 
 .list-contact-and-maps {
@@ -14,17 +16,17 @@
   align-items: center;
   text-align: left;
   grid-template-columns: 1fr 1fr;
-  gap: calc(var(--base-size) * 2);
+  gap: calc(u.$base-size * 2);
   box-sizing: border-box;
 }
 
 .maps {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: var(--border-radius);
+  border-radius: u.$border-radius;
   box-sizing: border-box;
   overflow: hidden;
-  transform: translateX(var(--translate-size));
+  transform: translateX(u.$translate-size);
 }
 
 .maps-offline {
@@ -33,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--secondary-color);
+  background: u.$secondary-color;
 }
 
 .maps-offline img {
@@ -44,31 +46,31 @@
 
 .list-contacts {
   display: grid;
-  gap: calc(var(--base-size) * 2);
+  gap: calc(u.$base-size * 2);
   text-align: left;
   width: 100%;
 }
 
 .list-contacts li {
   display: grid;
-  gap: calc(var(--base-size) * 2);
+  gap: calc(u.$base-size * 2);
   grid-template-columns: auto 1fr;
   align-items: center;
-  transform: translateX(var(--translate-size-min));
+  transform: translateX(u.$translate-size-min);
   transition-delay: calc(var(--delay) * 100ms);
 }
 
 .list-contacts li .icon {
   width: 6rem;
   height: 6rem;
-  padding: calc(var(--base-size));
+  padding: calc(u.$base-size);
   border-radius: 50%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--gradient-color);
-  box-shadow: var(--shadow);
+  background: u.$gradient-color;
+  box-shadow: u.$shadow;
 }
 
 .list-contacts li a {
@@ -84,24 +86,23 @@
   border-radius: 0;
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
   .contact .container .title {
     transform: translateY(0);
-    transform: translateX(var(--translate-size-min));
+    transform: translateX(u.$translate-size-min);
   }
-
   .list-contact-and-maps {
     grid-template-columns: 1fr;
   }
 
   .maps {
     order: 1;
-    transform: translateX(var(--translate-size));
+    transform: translateX(u.$translate-size);
   }
 
   .list-contacts li {
     transform: translateY(0);
-    transform: translateX(var(--translate-size-min));
+    transform: translateX(u.$translate-size-min);
   }
 
   .list-contact-and-maps .info {
