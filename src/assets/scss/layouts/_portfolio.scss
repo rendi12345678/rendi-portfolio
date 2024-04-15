@@ -9,13 +9,13 @@
 
 .list-portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(u.rem(250), 1fr));
   text-align: left;
   width: 100%;
-  gap: calc(u.$base-size) * 2;
+  gap: calc(u.$base-size * 2);
 }
 .list-portfolio .item {
-  transform: translateY(u.$translate-size);
+  transform: translateX(u.$translate-size-min);
   cursor: grab;
   padding: 0 calc(u.$base-size * 1);
   margin-bottom: calc(u.$base-size * 2);
@@ -28,22 +28,22 @@
 }
 .project-image div {
   width: 100%;
-  height: clamp(23rem, 30vw, 30rem) !important;
   border-radius: u.$border-radius;
   overflow: hidden;
 }
 .swiper-pagination-bullet {
   background-color: u.$body-color !important;
+  display: none !important;
 }
 
 .portfolio .title {
-  transform: translateY(u.$translate-size);
+  transform: translateX(u.$translate-size);
 }
 
 .list-portfolio img {
   width: 100%;
   object-fit: fill;
-  height: clamp(23rem, 30vw, 30rem) !important;
+  aspect-ratio: 16 / 9;
 }
 
 .list-portfolio .link-demo a {

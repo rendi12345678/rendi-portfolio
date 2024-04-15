@@ -1,4 +1,5 @@
-@use "../utils/" as u;
+@use "../utils" as u;
+$icon-size: u.rem(30);
 
 .hero {
   position: relative;
@@ -29,7 +30,6 @@
 
 .social-media-links {
   --delay: 4;
-  --icon-size: 2.5rem;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -40,9 +40,9 @@
 }
 
 .svg-wrapper {
-  width: var(--icon-size);
+  width: $icon-size;
   border-radius: 0;
-  height: var(--icon-size);
+  height: $icon-size;
 }
 
 .svg-wrapper g {
@@ -55,9 +55,9 @@
 }
 
 .svg-wrapper svg {
-  width: var(--icon-size);
+  width: $icon-size;
   border-radius: 0;
-  height: var(--icon-size);
+  height: $icon-size;
 }
 
 .info {
@@ -69,7 +69,7 @@
 
 .hero-title {
   text-align: center;
-  letter-spacing: -0.1rem;
+  letter-spacing: u.rem(-1);
   --delay: 2;
 }
 
@@ -92,8 +92,8 @@
 
 .circle-image {
   --delay: 0;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: u.rem(45);
+  height: u.rem(45);
   border-radius: 50%;
   background: url("/public/images/rendi1-650px.webp") center / cover no-repeat;
   margin-bottom: calc(u.$base-size * 2);

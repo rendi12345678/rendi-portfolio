@@ -1,0 +1,19 @@
+// // @use "functions" as f;
+
+// $breakpoints: (
+//   mobile: f.rem(480),
+//   tablet: f.rem(768),
+//   desktop: f.rem(1024),
+// );
+
+// @mixin breakpoint($condition, $size) {
+//   @if ($condition == up) {
+//     @media (width < map-get($breakpoints, $size)) {
+//       @content;
+//     }
+//   } @else {
+//     @media (width >= map-get($breakpoints, $size)) {
+//       @content;
+//     }
+//   }
+// }

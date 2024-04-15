@@ -13,7 +13,7 @@
 
 .services .container .list-services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(u.rem(250), 1fr));
   gap: calc(u.$base-size * 2);
 }
 

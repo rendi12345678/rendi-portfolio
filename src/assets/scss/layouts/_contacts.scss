@@ -39,9 +39,9 @@
 }
 
 .maps-offline img {
-  --image-size: 20rem;
-  height: var(--image-size);
-  width: var(--image-size);
+  $image-size: u.rem(200);
+  height: $image-size;
+  width: $image-size;
 }
 
 .list-contacts {
@@ -61,8 +61,8 @@
 }
 
 .list-contacts li .icon {
-  width: 6rem;
-  height: 6rem;
+  width: u.rem(60);
+  height: u.rem(60);
   padding: calc(u.$base-size);
   border-radius: 50%;
   box-sizing: border-box;
