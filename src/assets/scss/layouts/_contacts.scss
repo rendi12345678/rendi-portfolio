@@ -1,4 +1,5 @@
 @use "../utils" as u;
+@use "../globals" as g;
 
 .contact .container {
   display: flex;
@@ -8,7 +9,7 @@
 }
 
 .contact .container .title {
-  transform: translateX(u.$translate-size-min);
+  transform: translateX(g.$translate-size-min);
 }
 
 .list-contact-and-maps {
@@ -16,17 +17,17 @@
   align-items: center;
   text-align: left;
   grid-template-columns: 1fr 1fr;
-  gap: calc(u.$base-size * 2);
+  gap: calc(g.$base-size * 2);
   box-sizing: border-box;
 }
 
 .maps {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: u.$border-radius;
+  border-radius: g.$border-radius;
   box-sizing: border-box;
   overflow: hidden;
-  transform: translateX(u.$translate-size);
+  transform: translateX(g.$translate-size);
 }
 
 .maps-offline {
@@ -35,7 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: u.$secondary-color;
+  background: g.$secondary-color;
 }
 
 .maps-offline img {
@@ -46,31 +47,31 @@
 
 .list-contacts {
   display: grid;
-  gap: calc(u.$base-size * 2);
+  gap: calc(g.$base-size * 2);
   text-align: left;
   width: 100%;
 }
 
 .list-contacts li {
   display: grid;
-  gap: calc(u.$base-size * 2);
+  gap: calc(g.$base-size * 2);
   grid-template-columns: auto 1fr;
   align-items: center;
-  transform: translateX(u.$translate-size-min);
+  transform: translateX(g.$translate-size-min);
   transition-delay: calc(var(--delay) * 100ms);
 }
 
 .list-contacts li .icon {
   width: u.rem(60);
   height: u.rem(60);
-  padding: calc(u.$base-size);
+  padding: calc(g.$base-size);
   border-radius: 50%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: u.$gradient-color;
-  box-shadow: u.$shadow;
+  background: g.$gradient-color;
+  box-shadow: g.$shadow;
 }
 
 .list-contacts li a {
@@ -89,7 +90,7 @@
 @media (width < 768px) {
   .contact .container .title {
     transform: translateY(0);
-    transform: translateX(u.$translate-size-min);
+    transform: translateX(g.$translate-size-min);
   }
   .list-contact-and-maps {
     grid-template-columns: 1fr;
@@ -97,12 +98,12 @@
 
   .maps {
     order: 1;
-    transform: translateX(u.$translate-size);
+    transform: translateX(g.$translate-size);
   }
 
   .list-contacts li {
     transform: translateY(0);
-    transform: translateX(u.$translate-size-min);
+    transform: translateX(g.$translate-size-min);
   }
 
   .list-contact-and-maps .info {

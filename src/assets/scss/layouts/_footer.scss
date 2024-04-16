@@ -1,9 +1,9 @@
-@use "../utils/" as u;
+@use "../globals/" as g;
 
 footer {
   width: 100%;
-  padding: u.$base-size;
-  background: u.$secondary-color;
+  padding: g.$base-size;
+  background: g.$secondary-color;
 }
 
 footer .container {

@@ -1,9 +1,10 @@
+@use "colors" as c;
+@use "variables" as v;
 @use "../utils/" as u;
 
 /* Global */
-
 html {
-  scroll-padding-top: calc(u.$base-size * 2);
+  scroll-padding-top: calc(v.$base-size * 2 + v.$navbar-height);
 }
 
 body {
@@ -19,19 +20,19 @@ body::before {
   position: fixed;
   inset: 0;
   height: 100svh;
-  background: u.$gradient-color;
+  background: c.$primary-color;
   z-index: -12;
 }
 
 .container {
   margin: auto;
   width: 100%;
-  max-width: u.$max-width;
-  padding: 0 u.$base-horizontal-fluid-size;
+  max-width: v.$max-width;
+  padding: 0 v.$base-horizontal-fluid-size;
 }
 
 section {
-  margin-bottom: calc(u.$base-size * 14);
+  margin-bottom: calc(v.$base-size * 14);
 }
 
 /* Loading Animation */
@@ -44,7 +45,7 @@ section {
   position: fixed;
   width: 48px;
   height: 48px;
-  border: 5px solid u.$contrast-color;
+  border: 5px solid c.$contrast-color;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: block;
@@ -65,8 +66,8 @@ section {
 /* Reveal Animation */
 .reveal {
   opacity: 0;
-  transition: opacity u.$animation-time calc(var(--delay, 3) * 100ms + 100ms),
-    transform u.$animation-time calc(var(--delay, 3) * 100ms),
+  transition: opacity v.$animation-time calc(var(--delay, 3) * 100ms + 100ms),
+    transform v.$animation-time calc(var(--delay, 3) * 100ms),
     background-color 300ms;
 }
 
@@ -78,46 +79,34 @@ section {
 button {
   border: 0;
   font-weight: 600;
-  color: u.$button-color;
-  padding: 0.8rem 1.5rem;
-  border-radius: u.$border-radius;
+  color: c.$button-color;
+  padding: u.rem(15) u.rem(30);
+  border-radius: v.$border-radius;
   width: fit-content;
   cursor: pointer;
-  margin-top: calc(u.$base-size * 2);
+  margin-top: calc(v.$base-size * 2);
   transition: 300ms;
 }
 
-.big-size-btn {
-  padding: 1.3rem 2.3rem;
-}
-
-.medium-size-btn {
-  padding: 0.9rem 1.9rem;
-}
-
-.small-size-btn {
-  padding: 0.5rem 1.5rem;
-}
-
 .blue-btn {
-  border: 0.2rem solid u.$contrast-color;
+  border: 0.2rem solid c.$contrast-color;
   background-color: transparent;
-  color: u.$contrast-color;
+  color: c.$contrast-color;
 }
 
 .blue-btn:hover {
-  border: 0.2rem solid u.$accent-color;
-  background-color: u.$accent-color;
-  color: u.$contrast-color;
+  border: 0.2rem solid c.$accent-color;
+  background-color: c.$accent-color;
+  color: c.$contrast-color;
 }
 
 /* Miscellaneous */
 input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: u.$date-picker-color;
+  filter: c.$date-picker-color;
 }
 
 img {
-  border-radius: u.$border-radius;
+  border-radius: v.$border-radius;
   box-sizing: border-box;
   object-fit: cover;
 }
@@ -125,6 +114,6 @@ img {
 label {
   height: 100%;
   width: 100%;
-  color: u.$contrast-color;
+  color: c.$contrast-color;
   font-weight: bold;
 }

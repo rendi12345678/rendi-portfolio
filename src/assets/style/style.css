@@ -135,17 +135,9 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/Open_Sans/static/OpenSans-ExtraBold.ttf);
-}
-@font-face {
-  font-family: "Source Sans 3";
-  src: url(../fonts/Source_Sans_3/static/SourceSans3-Medium.ttf);
-}
 /* Global */
 html {
-  scroll-padding-top: calc(0.75rem * 2);
+  scroll-padding-top: calc(0.75rem * 2 + 4.375rem);
 }
 
 body {
@@ -163,7 +155,7 @@ body::before {
   position: fixed;
   inset: 0;
   height: 100svh;
-  background: linear-gradient(to top left, #000000, #1a1a1a);
+  background: #000000;
   z-index: -12;
 }
 
@@ -208,7 +200,7 @@ section {
 /* Reveal Animation */
 .reveal {
   opacity: 0;
-  transition: opacity 2s calc(var(--delay, 3) * 100ms + 100ms), transform 2s calc(var(--delay, 3) * 100ms), background-color 300ms;
+  transition: opacity 1.5s calc(var(--delay, 3) * 100ms + 100ms), transform 1.5s calc(var(--delay, 3) * 100ms), background-color 300ms;
 }
 
 .reveal.show-animation {
@@ -220,25 +212,13 @@ button {
   border: 0;
   font-weight: 600;
   color: #fff;
-  padding: 0.8rem 1.5rem;
+  padding: 0.9375rem 1.875rem;
   border-radius: 0.75rem;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
   margin-top: calc(0.75rem * 2);
   transition: 300ms;
-}
-
-.big-size-btn {
-  padding: 1.3rem 2.3rem;
-}
-
-.medium-size-btn {
-  padding: 0.9rem 1.9rem;
-}
-
-.small-size-btn {
-  padding: 0.5rem 1.5rem;
 }
 
 .blue-btn {
@@ -248,8 +228,8 @@ button {
 }
 
 .blue-btn:hover {
-  border: 0.2rem solid #2a50da;
-  background-color: #2a50da;
+  border: 0.2rem solid hsl(227, 100%, 65%);
+  background-color: hsl(227, 100%, 65%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -276,12 +256,11 @@ label {
   margin-bottom: calc(0.75rem * 2);
   width: 100%;
 }
-.title h5 {
-  color: #2a50da;
+.title h4 {
+  color: hsl(227, 100%, 65%);
 }
 
 p,
-button,
 a,
 label,
 input,
@@ -293,8 +272,9 @@ tr,
 td,
 div,
 placeholder {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: arial, helvetica, sans-serif;
   font-size: clamp(0.875rem, 1.6vw, 1rem);
+  font-weight: 400;
   line-height: 1.5;
   color: hsl(0, 0%, 90%);
 }
@@ -308,42 +288,36 @@ h1,
 h2,
 h3,
 h4,
-h5,
-.title p {
-  font-family: "Open Sans", sans-serif;
+button {
+  font-family: arial, helvetica, sans-serif;
+  font-weight: 700;
   line-height: 1.1;
   box-sizing: border-box;
 }
 
 h2,
 h3,
-h4,
-h5 {
+h4 {
   color: hsl(0, 0%, 100%);
 }
 
 h1 {
   color: hsl(0, 0%, 100%);
-  font-size: calc(clamp(0.875rem, 1.6vw, 1rem) * 1.2 * 1.2 * 1.2 * 1.2);
+  font-size: calc(clamp(0.875rem, 1.6vw, 1rem) * 1.4 * 1.4 * 1.4);
   margin-bottom: 0.75rem;
 }
 
 h2 {
-  font-size: calc(clamp(0.875rem, 1.6vw, 1rem) * 1.2 * 1.2 * 1.2);
+  font-size: calc(clamp(0.875rem, 1.6vw, 1rem) * 1.4 * 1.4);
   margin-bottom: 0.75rem;
 }
 
 h3 {
-  font-size: calc(clamp(0.875rem, 1.6vw, 1rem) * 1.2 * 1.2);
+  font-size: calc(clamp(0.875rem, 1.6vw, 1rem) * 1.4);
   margin-bottom: 0.75rem;
 }
 
 h4 {
-  font-size: calc(clamp(0.875rem, 1.6vw, 1rem) * 1.2);
-  margin-bottom: 0.75rem;
-}
-
-h5 {
   font-size: clamp(0.875rem, 1.6vw, 1rem);
   margin-bottom: 0.75rem;
 }
@@ -385,16 +359,18 @@ a {
 }
 
 a:hover {
-  color: #2a50da;
+  color: hsl(227, 100%, 65%);
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 5.3125rem;
+  height: 4.375rem;
   z-index: 999;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 0.121875rem 0.1625rem;
+  background: #000000;
 }
 
 header .container {
@@ -418,7 +394,7 @@ header button {
   margin: 0;
 }
 
-header nav h3 {
+header nav .navbar-title {
   margin-bottom: 0;
   z-index: 999;
   transform: translateX(-100%);
@@ -487,7 +463,7 @@ header .container .close-nav-btn {
     height: 100svh;
     width: 100%;
     transition: 800ms;
-    padding-top: 5.3125rem;
+    padding-top: 4.375rem;
     z-index: 9;
   }
   header nav ul.active {
@@ -509,8 +485,8 @@ header .container .close-nav-btn {
   }
 }
 .hero {
-  position: relative;
   height: 100svh;
+  padding-top: 4.375rem;
 }
 
 .hero-image {
@@ -558,7 +534,7 @@ header .container .close-nav-btn {
 }
 
 .svg-wrapper:hover g {
-  fill: #2a50da;
+  fill: hsl(227, 100%, 65%);
 }
 
 .svg-wrapper svg {
@@ -577,15 +553,10 @@ header .container .close-nav-btn {
 .hero-title {
   text-align: center;
   letter-spacing: -0.0625rem;
-  --delay: 2;
-}
-
-.hero-sub-title {
+  max-width: 20ch;
   --delay: 1;
 }
 
-.circle-image,
-.hero-sub-title,
 .hero-title,
 .hero-description,
 .cta-btn,
@@ -594,26 +565,17 @@ header .container .close-nav-btn {
 }
 
 .hero-title span {
-  color: #2a50da;
-}
-
-.circle-image {
-  --delay: 0;
-  width: 2.8125rem;
-  height: 2.8125rem;
-  border-radius: 50%;
-  background: url("/public/images/rendi1-650px.webp") center/cover no-repeat;
-  margin-bottom: calc(0.75rem * 2);
+  color: hsl(227, 100%, 65%);
 }
 
 .hero-description {
-  --delay: 3;
+  --delay: 2;
   max-width: 60ch;
   text-align: center;
 }
 
 .cta-btn {
-  --delay: 5;
+  --delay: 3;
 }
 
 @media (width < 430px) {
@@ -703,7 +665,7 @@ section.about .container {
   padding: calc(0.75rem * 2);
   background: linear-gradient(to top left, #000000, #1a1a1a);
   border-radius: 0.75rem;
-  box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 0.121875rem 0.1625rem;
   transition-delay: calc(var(--delay) * 100ms);
   transform: translateX(-100%);
 }
@@ -727,7 +689,7 @@ section.about .container {
 }
 
 .skills .container ul li div {
-  box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 0.121875rem 0.1625rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -800,7 +762,7 @@ section.about .container {
 
 .list-portfolio .link-demo a {
   display: inline-block;
-  color: #2a50da;
+  color: hsl(227, 100%, 65%);
   cursor: pointer;
 }
 
@@ -817,7 +779,7 @@ section.about .container {
 
 .testimonials .container .list-testimonials {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
   gap: calc(0.75rem * 2);
   text-align: left;
 }
@@ -927,7 +889,7 @@ section.about .container {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to top left, #000000, #1a1a1a);
-  box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 0.121875rem 0.1625rem;
 }
 
 .list-contacts li a {

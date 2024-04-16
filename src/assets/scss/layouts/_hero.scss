@@ -1,9 +1,11 @@
 @use "../utils" as u;
+@use "../globals" as g;
+
 $icon-size: u.rem(30);
 
 .hero {
-  position: relative;
   height: 100svh;
+  padding-top: g.$navbar-height;
 }
 
 .hero-image {
@@ -33,8 +35,8 @@ $icon-size: u.rem(30);
   display: flex;
   align-content: center;
   justify-content: space-between;
-  gap: u.$base-size;
-  margin-top: u.$base-size;
+  gap: g.$base-size;
+  margin-top: g.$base-size;
   background: transparent;
   z-index: 99;
 }
@@ -46,12 +48,12 @@ $icon-size: u.rem(30);
 }
 
 .svg-wrapper g {
-  fill: u.$body-color;
+  fill: g.$body-color;
   transition: 300ms;
 }
 
 .svg-wrapper:hover g {
-  fill: u.$accent-color;
+  fill: g.$accent-color;
 }
 
 .svg-wrapper svg {
@@ -70,15 +72,10 @@ $icon-size: u.rem(30);
 .hero-title {
   text-align: center;
   letter-spacing: u.rem(-1);
-  --delay: 2;
-}
-
-.hero-sub-title {
+  max-width: 20ch;
   --delay: 1;
 }
 
-.circle-image,
-.hero-sub-title,
 .hero-title,
 .hero-description,
 .cta-btn,
@@ -87,26 +84,17 @@ $icon-size: u.rem(30);
 }
 
 .hero-title span {
-  color: u.$accent-color;
-}
-
-.circle-image {
-  --delay: 0;
-  width: u.rem(45);
-  height: u.rem(45);
-  border-radius: 50%;
-  background: url("/public/images/rendi1-650px.webp") center / cover no-repeat;
-  margin-bottom: calc(u.$base-size * 2);
+  color: g.$accent-color;
 }
 
 .hero-description {
-  --delay: 3;
+  --delay: 2;
   max-width: 60ch;
   text-align: center;
 }
 
 .cta-btn {
-  --delay: 5;
+  --delay: 3;
 }
 
 @media (width < 430px) {

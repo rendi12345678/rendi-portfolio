@@ -3,7 +3,6 @@ import Button from "../components/ui/Button";
 
 const PrimaryButton = withButton(Button, {
   color: "blue",
-  size: "small",
 });
 
 function useButtons() {

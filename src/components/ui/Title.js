@@ -4,7 +4,7 @@ function Title({ title, description, className = "" }) {
   return (
     <div className={`title ${className}`}>
       <h2>{title}</h2>
-      <h5>{description}</h5>
+      <h4>{description}</h4>
     </div>
   );
 }

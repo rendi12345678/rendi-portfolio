@@ -1,14 +1,15 @@
 @use "../utils/" as u;
-
-$navbar-size: u.rem(85);
+@use "../globals/" as g;
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: $navbar-size;
+  height: g.$navbar-height;
   z-index: 999;
+  box-shadow: g.$shadow;
+  background: g.$primary-color;
 }
 
 header .container {
@@ -20,7 +21,7 @@ header .container {
 header nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 calc(u.$base-horizontal-fluid-size);
+  padding: 0 calc(g.$base-horizontal-fluid-size);
   align-items: center;
   width: fit-content;
   height: 100%;
@@ -31,7 +32,7 @@ header button {
   margin: 0;
 }
 
-header nav h3 {
+header nav .navbar-title {
   margin-bottom: 0;
   z-index: 999;
   transform: translateX(-100%);
@@ -40,7 +41,7 @@ header nav h3 {
 header nav ul {
   display: flex;
   align-items: center;
-  gap: calc(u.$base-size * 2);
+  gap: calc(g.$base-size * 2);
   width: fit-content;
   height: 100%;
 }
@@ -65,8 +66,8 @@ header .hamburger-menu {
 .hamburger-menu span {
   width: 100%;
   height: u.rem(3);
-  background: u.$contrast-color;
-  border-radius: u.$border-radius;
+  background: g.$contrast-color;
+  border-radius: g.$border-radius;
   transition: 800ms;
 }
 
@@ -94,7 +95,7 @@ header .container .close-nav-btn {
 
   header nav ul {
     position: absolute;
-    background: u.$primary-color;
+    background: g.$primary-color;
     flex-direction: column;
     transform: translateY(-100%);
     inset: 0;
@@ -102,7 +103,7 @@ header .container .close-nav-btn {
     height: 100svh;
     width: 100%;
     transition: 800ms;
-    padding-top: $navbar-size;
+    padding-top: g.$navbar-height;
     z-index: 9;
   }
 

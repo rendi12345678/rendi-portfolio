@@ -24,13 +24,13 @@ function About() {
             className="reveal"
           />
           <p className="reveal">
-            Hello, I'm Rendi Virgantara Setiawan, a meticulous web developer
-            from Indonesia. With a deep passion for coding and calisthenics, I
-            blend precision and creativity to craft bespoke websites for
-            businesses. Dedicated to delivering exceptional results, I create
-            digital experiences that resonate with your audience and propel your
-            brand forward. Let's collaborate to elevate your online presence for
-            success.
+            Hello, I'm Rendi Virgantara Setiawan, a passionate web developer
+            based in Indonesia. With a deep passion for coding and calisthenics,
+            I like to build interactive and responsive websites that can look
+            good on different platforms and browsers for business owners. I am
+            dedicated to delivering exceptional results. I create digital
+            experiences that resonate with your audience and propel your brand
+            forward. Let's collaborate to elevate your brand online for success
           </p>
         </div>
       </Container>

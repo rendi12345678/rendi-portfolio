@@ -1,0 +1,11 @@
+@use "../utils/" as u;
+
+$max-width: u.rem(1100);
+$border-radius: u.rem(12);
+$base-size: u.rem(12);
+$base-vertical-fluid-size: 5svh;
+$translate-size: u.rem(200);
+$translate-size-min: u.rem(-200);
+$navbar-height: u.rem(70);
+$base-horizontal-fluid-size: 5vw;
+$animation-time: 1.5s;

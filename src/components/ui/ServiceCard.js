@@ -7,7 +7,7 @@ function ServiceCard({ title, description, delay }) {
 
   return (
     <li ref={liRef} className="reveal">
-      <h4>{title}</h4>
+      <h3>{title}</h3>
       <p>{description}</p>
     </li>
   );

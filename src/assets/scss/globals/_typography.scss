@@ -1,27 +1,27 @@
-@use "../utils" as u;
+@use "variables" as v;
+@use "colors" as c;
+@use "../utils/" as u;
 
-$golden-ratio: 1.2;
+$golden-ratio: 1.4;
 $body-text-min: u.rem(14);
 $body-text-prefered: 1.6vw;
 $body-text-max: u.rem(16);
 $body-text: clamp($body-text-min, $body-text-prefered, $body-text-max);
-$h5: $body-text;
-$h4: calc($h5 * $golden-ratio);
+$h4: $body-text;
 $h3: calc($h4 * $golden-ratio);
 $h2: calc($h3 * $golden-ratio);
 $h1: calc($h2 * $golden-ratio);
 
 .title {
-  margin-bottom: calc(u.$base-size * 2);
+  margin-bottom: calc(v.$base-size * 2);
   width: 100%;
 
-  h5 {
-    color: u.$accent-color;
+  h4 {
+    color: c.$accent-color;
   }
 }
 
 p,
-button,
 a,
 label,
 input,
@@ -35,8 +35,9 @@ div,
 placeholder {
   font-family: u.$text-font;
   font-size: $body-text;
+  font-weight: u.$text-font-weight;
   line-height: 1.5;
-  color: u.$body-color;
+  color: c.$body-color;
 }
 
 p {
@@ -48,62 +49,59 @@ h1,
 h2,
 h3,
 h4,
-h5,
-.title p {
+button {
   font-family: u.$heading-font;
+  font-weight: u.$heading-font-weight;
   line-height: 1.1;
   box-sizing: border-box;
 }
 
 h2,
 h3,
-h4,
-h5 {
-  color: u.$headings-color;
+h4 {
+  color: c.$headings-color;
 }
 
 h1 {
-  color: u.$contrast-color;
+  color: c.$contrast-color;
   font-size: $h1;
-  margin-bottom: u.$base-size;
-}
-h2 {
-  font-size: $h2;
-  margin-bottom: u.$base-size;
-}
-h3 {
-  font-size: $h3;
-  margin-bottom: u.$base-size;
-}
-h4 {
-  font-size: $h4;
-  margin-bottom: u.$base-size;
+  margin-bottom: v.$base-size;
 }
 
-h5 {
-  font-size: $h5;
-  margin-bottom: u.$base-size;
+h2 {
+  font-size: $h2;
+  margin-bottom: v.$base-size;
+}
+
+h3 {
+  font-size: $h3;
+  margin-bottom: v.$base-size;
+}
+
+h4 {
+  font-size: $h4;
+  margin-bottom: v.$base-size;
 }
 
 /* Input and Textarea */
 input,
 textarea {
   padding: 1rem;
-  color: u.$contrast-color;
-  background: u.$input-color;
+  color: c.$contrast-color;
+  background: c.$input-color;
   outline: none;
-  border: 0.1rem solid u.$contrast-color;
+  border: 0.1rem solid c.$contrast-color;
   width: 100%;
   box-sizing: border-box;
   margin-top: 0.5rem;
-  //   border: 0.1rem solid u.$border-color;
-  background: u.$secondary-color;
+  //   border: 0.1rem solid v.$border-color;
+  background: c.$secondary-color;
 }
 
 input::placeholder,
 textarea::placeholder {
   padding: 1rem;
-  color: u.$body-color;
+  color: c.$body-color;
   opacity: 0.4;
 }
 
@@ -111,11 +109,11 @@ textarea::placeholder {
 a {
   text-decoration: none;
   display: block;
-  color: u.$body-color;
+  color: c.$body-color;
   border-radius: 1.5rem;
   transition: 500ms;
 }
 
 a:hover {
-  color: u.$accent-color;
+  color: c.$accent-color;
 }

@@ -1,4 +1,5 @@
 @use "../utils/" as u;
+@use "../globals/" as g;
 
 .services .container {
   display: flex;
@@ -8,21 +9,21 @@
 }
 
 .services .container .title {
-  transform: translateX(u.$translate-size);
+  transform: translateX(g.$translate-size);
 }
 
 .services .container .list-services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(u.rem(250), 1fr));
-  gap: calc(u.$base-size * 2);
+  gap: calc(g.$base-size * 2);
 }
 
 .services .container .list-services li {
   text-align: left;
-  padding: calc(u.$base-size * 2);
-  background: u.$gradient-color;
-  border-radius: u.$border-radius;
-  box-shadow: u.$shadow;
+  padding: calc(g.$base-size * 2);
+  background: g.$gradient-color;
+  border-radius: g.$border-radius;
+  box-shadow: g.$shadow;
   transition-delay: calc(var(--delay) * 100ms);
   transform: translateX(-100%);
 }
