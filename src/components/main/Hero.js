@@ -5,7 +5,6 @@ import HeroInfo from "../ui/HeroInfo";
 function Hero() {
   return (
     <section id="hero" className="hero">
-      {/* <HeroImage /> */}
       <Container>
         <HeroInfo />
       </Container>

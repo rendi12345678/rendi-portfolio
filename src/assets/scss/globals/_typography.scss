@@ -2,7 +2,7 @@
 @use "colors" as c;
 @use "../utils/" as u;
 
-$golden-ratio: 1.4;
+$golden-ratio: 1.35;
 $body-text-min: u.rem(14);
 $body-text-prefered: 1.6vw;
 $body-text-max: u.rem(16);
@@ -65,7 +65,7 @@ h4 {
 h1 {
   color: c.$contrast-color;
   font-size: $h1;
-  margin-bottom: v.$base-size;
+  margin-bottom: v.$double-base-size;
 }
 
 h2 {

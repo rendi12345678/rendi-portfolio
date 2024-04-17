@@ -4,35 +4,30 @@
 
 /* Global */
 html {
+  overflow-x: hidden;
   scroll-padding-top: calc(v.$base-size * 2 + v.$navbar-height);
 }
 
 body {
-  position: relative;
-  width: 100vw;
+  width: 100%;
   text-size-adjust: none;
   overflow-x: hidden;
-  background: transparent;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  height: 100svh;
   background: c.$primary-color;
-  z-index: -12;
 }
 
 .container {
-  margin: auto;
+  margin-inline: auto;
   width: 100%;
   max-width: v.$max-width;
-  padding: 0 v.$base-horizontal-fluid-size;
+  padding-inline: v.$base-horizontal-fluid-size;
+  box-sizing: border-box;
 }
 
 section {
+  overflow-x: hidden;
   margin-bottom: calc(v.$base-size * 14);
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* Loading Animation */
@@ -78,24 +73,23 @@ section {
 
 button {
   border: 0;
-  font-weight: 600;
   color: c.$button-color;
-  padding: u.rem(15) u.rem(30);
+  padding: u.rem(13.5) u.rem(calc(13.5 * 2));
   border-radius: v.$border-radius;
   width: fit-content;
   cursor: pointer;
-  margin-top: calc(v.$base-size * 2);
+  margin-top: v.$double-base-size;
   transition: 300ms;
 }
 
 .blue-btn {
-  border: 0.2rem solid c.$contrast-color;
+  border: u.rem(2) solid c.$contrast-color;
   background-color: transparent;
   color: c.$contrast-color;
 }
 
 .blue-btn:hover {
-  border: 0.2rem solid c.$accent-color;
+  border: u.rem(2) solid c.$accent-color;
   background-color: c.$accent-color;
   color: c.$contrast-color;
 }
