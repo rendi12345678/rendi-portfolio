@@ -5,7 +5,9 @@
 /* Global */
 html {
   overflow-x: hidden;
-  scroll-padding-top: calc(v.$base-size * 2 + v.$navbar-height);
+  scroll-padding-top: calc(
+    (v.$base-size * 2) + (v.$navbar-height * 2) + (v.$double-base-size * 2)
+  );
 }
 
 body {
@@ -24,7 +26,6 @@ body {
 }
 
 section {
-  overflow-x: hidden;
   margin-bottom: calc(v.$base-size * 14);
   box-sizing: border-box;
   width: 100%;
@@ -74,7 +75,7 @@ section {
 button {
   border: 0;
   color: c.$button-color;
-  padding: u.rem(13.5) u.rem(calc(13.5 * 2));
+  padding: u.rem(13.5) u.rem(calc(13.5 * 3));
   border-radius: v.$border-radius;
   width: fit-content;
   cursor: pointer;

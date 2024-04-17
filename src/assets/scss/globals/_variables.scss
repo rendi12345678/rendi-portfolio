@@ -7,6 +7,6 @@ $double-base-size: calc($base-size * 2);
 $base-vertical-fluid-size: 5svh;
 $translate-size: u.rem(200);
 $translate-size-min: u.rem(-200);
-$navbar-height: u.rem(70);
+$navbar-height: calc($double-base-size);
 $base-horizontal-fluid-size: 5vw;
-$animation-time: 1.5s;
+$animation-time: 1.8s;

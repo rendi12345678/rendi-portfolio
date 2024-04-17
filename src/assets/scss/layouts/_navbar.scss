@@ -1,15 +1,17 @@
 @use "../utils/" as u;
 @use "../globals/" as g;
 
+$border-size: u.rem(1);
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: g.$navbar-height;
+  padding-block: g.$navbar-height;
   z-index: 999;
-  box-shadow: g.$shadow;
+  border-bottom: $border-size solid rgba($color: #fff, $alpha: 0.25);
   background: g.$primary-color;
 
   .container {
@@ -20,6 +22,7 @@ header {
     align-items: center;
 
     .navbar-title {
+      z-index: 99;
       margin-bottom: 0;
       transform: translateX(-100%);
     }
@@ -27,51 +30,56 @@ header {
     nav {
       display: flex;
       align-items: center;
-      gap: u.rem(2);
+      gap: g.$double-base-size;
 
       ul {
         display: flex;
         align-items: center;
-        gap: u.rem(2);
+        gap: g.$double-base-size;
 
         li {
           transform: translateX(-100%);
           transition-delay: calc(var(--delay) * 100ms) !important;
         }
       }
+    }
 
-      .hamburger-menu {
-        transform: translateX(100%);
-        display: none;
-        flex-direction: column;
-        width: u.rem(30);
-        height: u.rem(20);
-        align-items: flex-end;
-        justify-content: space-between;
-        cursor: pointer;
+    .hamburger-menu {
+      transform: translateX(100%);
+      display: none;
+      flex-direction: column;
+      width: u.rem(30);
+      height: u.rem(20);
+      align-items: flex-end;
+      justify-content: space-between;
+      cursor: pointer;
 
-        span {
-          width: 100%;
-          height: u.rem(3);
-          background: g.$contrast-color;
-          border-radius: g.$border-radius;
-          transition: transform 800ms;
+      span {
+        width: 100%;
+        height: u.rem(3);
+        background: g.$contrast-color;
+        border-radius: g.$border-radius;
+        transition: 800ms;
+      }
+
+      &.active {
+        span:first-child,
+        span:last-child {
+          background-color: red;
         }
 
-        &.active {
-          span:first-child {
-            transform: rotate(-35deg);
-            transform-origin: top right;
-          }
+        span:first-child {
+          transform: rotate(-35deg);
+          transform-origin: top right;
+        }
 
-          span:nth-child(2) {
-            display: none;
-          }
+        span:nth-child(2) {
+          display: none;
+        }
 
-          span:last-child {
-            transform: rotate(35deg);
-            transform-origin: bottom right;
-          }
+        span:last-child {
+          transform: rotate(35deg);
+          transform-origin: bottom right;
         }
       }
     }
@@ -80,34 +88,37 @@ header {
 
 @media (max-width: 991px) {
   header {
-    padding: 0;
-
     .container {
-      position: relative;
-
       .hamburger-menu {
         display: flex;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 9999;
+        z-index: 99;
       }
 
-      nav ul {
-        position: absolute;
-        top: g.$navbar-height;
-        background: g.$primary-color;
-        flex-direction: column;
-        transform: translateY(-100%);
-        inset: 0;
-        opacity: 0;
-        height: calc(100vh - g.$navbar-height);
+      nav {
+        position: fixed;
         width: 100%;
-        transition: transform 800ms, opacity 800ms;
-        z-index: 9;
+        box-sizing: border-box;
+        top: -100%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 0;
+        transition: 800ms;
+        justify-content: end;
+
+        ul {
+          padding-top: g.$navbar-height;
+          background: g.$primary-color;
+          transition: 800ms;
+          opacity: 1;
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+        }
 
         &.active {
-          transform: translateY(0);
+          top: calc(g.$navbar-height * 3 + $border-size);
+          height: 100%;
           opacity: 1;
         }
       }

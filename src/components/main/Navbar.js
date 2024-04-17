@@ -1,4 +1,5 @@
 import React from "react";
+import useNavbarContext from "../../hooks/useNavbarContext";
 import HamburgerMenu from "../ui/HamburgerMenu";
 import LinkItem from "../ui/LinkItem";
 import NavList from "../ui/NavList";
@@ -36,18 +37,20 @@ const linkItems = [
 ];
 
 function Navbar() {
+  const { navbarRef } = useNavbarContext();
+
   return (
     <header>
       <Container>
-        <nav className="reveal">
-          <h3 className="navbar-title reveal">Rendi's Portfolio</h3>
-          <HamburgerMenu />
+        <h3 className="navbar-title reveal">Rendi's Portfolio</h3>
+        <nav className="reveal" ref={navbarRef}>
           <NavList>
             {linkItems.map(({ to, text }, index) => (
               <LinkItem to={to} text={text} key={index} delay={index} />
             ))}
           </NavList>
         </nav>
+        <HamburgerMenu />
       </Container>
     </header>
   );

@@ -138,7 +138,7 @@ table {
 /* Global */
 html {
   overflow-x: hidden;
-  scroll-padding-top: calc(0.625rem * 2 + 4.375rem);
+  scroll-padding-top: calc(0.625rem * 2 + 0.625rem * 2 * 2 + 0.625rem * 2 * 2);
 }
 
 body {
@@ -159,7 +159,6 @@ body {
 }
 
 section {
-  overflow-x: hidden;
   margin-bottom: calc(0.625rem * 14);
   box-sizing: border-box;
   width: 100%;
@@ -195,7 +194,7 @@ section {
 /* Reveal Animation */
 .reveal {
   opacity: 0;
-  transition: opacity 1.5s calc(var(--delay, 3) * 100ms + 100ms), transform 1.5s calc(var(--delay, 3) * 100ms), background-color 300ms;
+  transition: opacity 1.8s calc(var(--delay, 3) * 100ms + 100ms), transform 1.8s calc(var(--delay, 3) * 100ms), background-color 300ms;
 }
 
 .reveal.show-animation {
@@ -206,7 +205,7 @@ section {
 button {
   border: 0;
   color: #fff;
-  padding: 0.84375rem 1.6875rem;
+  padding: 0.84375rem 2.53125rem;
   border-radius: 0.75rem;
   width: -moz-fit-content;
   width: fit-content;
@@ -362,9 +361,9 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  height: 4.375rem;
+  padding-block: calc(0.625rem * 2);
   z-index: 999;
-  box-shadow: rgba(255, 255, 255, 0.15) 0 0.121875rem 0.1625rem;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.25);
   background: #000000;
 }
 header .container {
@@ -375,24 +374,25 @@ header .container {
   align-items: center;
 }
 header .container .navbar-title {
+  z-index: 99;
   margin-bottom: 0;
   transform: translateX(-100%);
 }
 header .container nav {
   display: flex;
   align-items: center;
-  gap: 0.125rem;
+  gap: calc(0.625rem * 2);
 }
 header .container nav ul {
   display: flex;
   align-items: center;
-  gap: 0.125rem;
+  gap: calc(0.625rem * 2);
 }
 header .container nav ul li {
   transform: translateX(-100%);
   transition-delay: calc(var(--delay) * 100ms) !important;
 }
-header .container nav .hamburger-menu {
+header .container .hamburger-menu {
   transform: translateX(100%);
   display: none;
   flex-direction: column;
@@ -402,60 +402,64 @@ header .container nav .hamburger-menu {
   justify-content: space-between;
   cursor: pointer;
 }
-header .container nav .hamburger-menu span {
+header .container .hamburger-menu span {
   width: 100%;
   height: 0.1875rem;
   background: hsl(0, 0%, 100%);
   border-radius: 0.75rem;
-  transition: transform 800ms;
+  transition: 800ms;
 }
-header .container nav .hamburger-menu.active span:first-child {
+header .container .hamburger-menu.active span:first-child,
+header .container .hamburger-menu.active span:last-child {
+  background-color: red;
+}
+header .container .hamburger-menu.active span:first-child {
   transform: rotate(-35deg);
   transform-origin: top right;
 }
-header .container nav .hamburger-menu.active span:nth-child(2) {
+header .container .hamburger-menu.active span:nth-child(2) {
   display: none;
 }
-header .container nav .hamburger-menu.active span:last-child {
+header .container .hamburger-menu.active span:last-child {
   transform: rotate(35deg);
   transform-origin: bottom right;
 }
 
 @media (max-width: 991px) {
-  header {
-    padding: 0;
-  }
-  header .container {
-    position: relative;
-  }
   header .container .hamburger-menu {
     display: flex;
-    position: absolute;
-    top: 0;
+    z-index: 99;
+  }
+  header .container nav {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    top: -100%;
     right: 0;
-    z-index: 9999;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    transition: 800ms;
+    justify-content: end;
   }
   header .container nav ul {
-    position: absolute;
-    top: 4.375rem;
+    padding-top: calc(0.625rem * 2);
     background: #000000;
-    flex-direction: column;
-    transform: translateY(-100%);
-    inset: 0;
-    opacity: 0;
-    height: calc(100vh - 4.375rem);
+    transition: 800ms;
+    opacity: 1;
     width: 100%;
-    transition: transform 800ms, opacity 800ms;
-    z-index: 9;
+    height: 100%;
+    flex-direction: column;
   }
-  header .container nav ul.active {
-    transform: translateY(0);
+  header .container nav.active {
+    top: calc(0.625rem * 2 * 3 + 0.0625rem);
+    height: 100%;
     opacity: 1;
   }
 }
 .hero {
   height: 100svh;
-  padding-top: 4.375rem;
+  padding-top: calc(0.625rem * 2);
 }
 
 .hero-image {
@@ -849,9 +853,9 @@ section.about .container {
 }
 
 .list-contacts li .icon {
-  width: 3.75rem;
-  height: 3.75rem;
-  padding: calc(0.625rem);
+  width: 3.5625rem;
+  height: 3.5625rem;
+  padding: calc(0.625rem + 0.1875rem);
   border-radius: 50%;
   box-sizing: border-box;
   display: flex;
