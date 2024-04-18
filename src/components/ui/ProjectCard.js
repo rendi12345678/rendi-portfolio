@@ -12,13 +12,13 @@ function ProjectCard({ imageUrl, title, linkdemo, description, delay, hash }) {
         <ImageComponent src={imageUrl} hash={hash} alt="Project" />
       </figure>
       <div className="project-details">
-        <h4>{title}</h4>
-        <h5 className="link-demo">
+        <h3>{title}</h3>
+        <h4 className="link-demo">
           Demo :{" "}
           <a href={linkdemo} target="_blank">
             {linkdemo}
           </a>
-        </h5>
+        </h4>
         <p className="project-description">{description}</p>
       </div>
     </div>

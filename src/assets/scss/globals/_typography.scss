@@ -13,11 +13,12 @@ $h2: calc($h3 * $golden-ratio);
 $h1: calc($h2 * $golden-ratio);
 
 .title {
-  margin-bottom: calc(v.$base-size * 2);
   width: 100%;
+  margin-bottom: v.$double-base-size;
 
   h4 {
     color: c.$accent-color;
+    margin-top: v.$base-size;
   }
 }
 
@@ -62,25 +63,26 @@ h4 {
   color: c.$headings-color;
 }
 
+h2,
+h3 {
+  margin-bottom: v.$base-size;
+}
+
 h1 {
   color: c.$contrast-color;
   font-size: $h1;
-  margin-bottom: v.$double-base-size;
 }
 
 h2 {
   font-size: $h2;
-  margin-bottom: v.$base-size;
 }
 
 h3 {
   font-size: $h3;
-  margin-bottom: v.$base-size;
 }
 
 h4 {
   font-size: $h4;
-  margin-bottom: v.$base-size;
 }
 
 /* Input and Textarea */

@@ -98,13 +98,15 @@ header {
         position: fixed;
         width: 100%;
         box-sizing: border-box;
-        top: -100%;
+        top: 0;
         right: 0;
         left: 0;
-        bottom: 0;
-        height: 0;
+        height: 100%;
+        width: 100%;
         transition: 800ms;
-        justify-content: end;
+        justify-content: start;
+        transform: translateY(-100%);
+        bottom: 0;
 
         ul {
           padding-top: g.$navbar-height;
@@ -117,9 +119,9 @@ header {
         }
 
         &.active {
-          top: calc(g.$navbar-height * 3 + $border-size);
-          height: 100%;
+          margin-top: calc(g.$navbar-height * 3 + $border-size);
           opacity: 1;
+          transform: translateY(0%);
         }
       }
     }

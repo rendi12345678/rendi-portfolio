@@ -1,40 +1,42 @@
 @use "../utils/" as u;
 @use "../globals/" as g;
 
-.skills .container {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr;
-}
+.skills {
+  .container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
 
-.skills .container ul {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(u.rem(100), 1fr));
-  gap: calc(g.$base-size * 2);
-}
+    ul {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(u.rem(100), 1fr));
+      gap: calc(g.$base-size * 2);
 
-.skills .container ul li {
-  transform: translateX(100%);
-  transition-delay: calc(var(--delay) * 100ms);
-}
+      li {
+        transform: translateX(100%);
+        transition-delay: calc(var(--delay) * 100ms);
 
-.skills .container ul li div {
-  box-shadow: g.$shadow;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: g.$gradient-color;
-  padding: calc(g.$base-size);
-  border-radius: g.$border-radius;
-  width: 100%;
-}
+        div {
+          box-shadow: g.$shadow;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: g.$gradient-color;
+          padding: calc(g.$base-size);
+          border-radius: g.$border-radius;
+          width: 100%;
 
-.skills .container ul li div p {
-  text-align: center;
-}
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
 
-.skills .container .title {
-  text-align: center;
-  transform: translateX(g.$translate-size-min);
+    .title {
+      text-align: center;
+      transform: translateX(g.$translate-size-min);
+    }
+  }
 }

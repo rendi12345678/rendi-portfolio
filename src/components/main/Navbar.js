@@ -43,7 +43,7 @@ function Navbar() {
     <header>
       <Container>
         <h3 className="navbar-title reveal">Rendi's Portfolio</h3>
-        <nav className="reveal" ref={navbarRef}>
+        <nav ref={navbarRef}>
           <NavList>
             {linkItems.map(({ to, text }, index) => (
               <LinkItem to={to} text={text} key={index} delay={index} />

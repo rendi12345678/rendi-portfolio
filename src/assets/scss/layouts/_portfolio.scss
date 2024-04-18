@@ -1,54 +1,65 @@
 @use "../utils/" as u;
 @use "../globals/" as g;
 
-.portfolio .container {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  text-align: center;
-}
+.portfolio {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
 
-.list-portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(u.rem(250), 1fr));
-  text-align: left;
-  width: 100%;
-  gap: calc(g.$base-size * 2);
-}
-.list-portfolio .item {
-  transform: translateX(g.$translate-size-min);
-  cursor: grab;
-  padding: 0 calc(g.$base-size * 1);
-  margin-bottom: calc(g.$base-size * 2);
-}
-.list-portfolio .item:active {
-  cursor: grabbing;
-}
-.list-portfolio .project-image {
-  margin-bottom: calc(g.$base-size);
-}
-.project-image div {
-  width: 100%;
-  border-radius: g.$border-radius;
-  overflow: hidden;
-}
-.swiper-pagination-bullet {
-  background-color: g.$body-color !important;
-  display: none !important;
-}
+    .title {
+      transform: translateX(g.$translate-size);
+    }
+  }
 
-.portfolio .title {
-  transform: translateX(g.$translate-size);
-}
+  .list-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(u.rem(250), 1fr));
+    text-align: left;
+    width: 100%;
+    gap: calc(g.$base-size * 2);
 
-.list-portfolio img {
-  width: 100%;
-  object-fit: fill;
-  aspect-ratio: 16 / 9;
-}
+    .item {
+      transform: translateX(g.$translate-size-min);
+      cursor: grab;
+      padding: 0 calc(g.$base-size * 1);
+      margin-bottom: calc(g.$base-size * 2);
 
-.list-portfolio .link-demo a {
-  display: inline-block;
-  color: g.$accent-color;
-  cursor: pointer;
+      &:active {
+        cursor: grabbing;
+      }
+
+      p {
+        margin-top: g.$base-size;
+      }
+
+      .project-image {
+        margin-bottom: g.$base-size;
+
+        div {
+          width: 100%;
+          border-radius: g.$border-radius;
+          overflow: hidden;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: fill;
+      aspect-ratio: 16 / 9;
+    }
+
+    .link-demo a {
+      display: inline-block;
+      color: g.$accent-color;
+      cursor: pointer;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background-color: g.$body-color !important;
+    display: none !important;
+  }
 }

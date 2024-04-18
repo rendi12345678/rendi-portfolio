@@ -4,10 +4,10 @@ footer {
   width: 100%;
   padding: g.$base-size;
   background: g.$secondary-color;
-}
 
-footer .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

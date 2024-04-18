@@ -1,112 +1,116 @@
 @use "../utils" as u;
 @use "../globals" as g;
 
-.contact .container {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  text-align: center;
-}
+.contact {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
 
-.contact .container .title {
-  transform: translateX(g.$translate-size-min);
-}
-
-.list-contact-and-maps {
-  display: grid;
-  align-items: center;
-  text-align: left;
-  grid-template-columns: 1fr 1fr;
-  gap: calc(g.$base-size * 2);
-  box-sizing: border-box;
-}
-
-.maps {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: g.$border-radius;
-  box-sizing: border-box;
-  overflow: hidden;
-  transform: translateX(g.$translate-size);
-}
-
-.maps-offline {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: g.$secondary-color;
-}
-
-.maps-offline img {
-  $image-size: u.rem(200);
-  height: $image-size;
-  width: $image-size;
-}
-
-.list-contacts {
-  display: grid;
-  gap: calc(g.$base-size * 2);
-  text-align: left;
-  width: 100%;
-}
-
-.list-contacts li {
-  display: grid;
-  gap: calc(g.$base-size * 2);
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  transform: translateX(g.$translate-size-min);
-  transition-delay: calc(var(--delay) * 100ms);
-}
-
-.list-contacts li .icon {
-  width: u.rem(57);
-  height: u.rem(57);
-  padding: calc(g.$base-size + u.rem(3));
-  border-radius: 50%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: g.$gradient-color;
-  box-shadow: g.$shadow;
-}
-
-.list-contacts li a {
-  text-decoration: underline;
-  display: inline-block;
-  width: fit-content;
-}
-
-.list-contacts li img {
-  width: 100%;
-  box-sizing: border-box;
-  height: 100%;
-  border-radius: 0;
-}
-
-@media (width < 768px) {
-  .contact .container .title {
-    transform: translateY(0);
-    transform: translateX(g.$translate-size-min);
+    .title {
+      transform: translateX(g.$translate-size-min);
+    }
   }
+
   .list-contact-and-maps {
-    grid-template-columns: 1fr;
+    display: grid;
+    align-items: center;
+    text-align: left;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(g.$base-size * 2);
+    box-sizing: border-box;
+
+    .maps {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: g.$border-radius;
+      box-sizing: border-box;
+      overflow: hidden;
+      transform: translateX(g.$translate-size);
+
+      &-offline {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: g.$secondary-color;
+
+        img {
+          $image-size: u.rem(200);
+          height: $image-size;
+          width: $image-size;
+        }
+      }
+    }
   }
 
-  .maps {
-    order: 1;
-    transform: translateX(g.$translate-size);
+  .list-contacts {
+    display: grid;
+    gap: calc(g.$base-size * 2);
+    text-align: left;
+    width: 100%;
+
+    li {
+      display: grid;
+      gap: calc(g.$base-size * 2);
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      transform: translateX(g.$translate-size-min);
+      transition-delay: calc(var(--delay) * 100ms);
+
+      .icon {
+        width: u.rem(57);
+        height: u.rem(57);
+        padding: calc(g.$base-size + u.rem(3));
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: g.$gradient-color;
+        box-shadow: g.$shadow;
+      }
+
+      a {
+        text-decoration: underline;
+        display: inline-block;
+        width: fit-content;
+      }
+
+      img {
+        width: 100%;
+        box-sizing: border-box;
+        height: 100%;
+        border-radius: 0;
+      }
+    }
   }
 
-  .list-contacts li {
-    transform: translateY(0);
-    transform: translateX(g.$translate-size-min);
-  }
+  @media (max-width: 768px) {
+    .container {
+      .title {
+        transform: translateX(g.$translate-size-min);
+      }
 
-  .list-contact-and-maps .info {
-    order: 2;
+      .list-contact-and-maps {
+        grid-template-columns: 1fr;
+
+        .maps {
+          order: 1;
+          transform: translateX(g.$translate-size);
+        }
+
+        li {
+          transform: translateY(0);
+          transform: translateX(g.$translate-size-min);
+        }
+
+        .info {
+          order: 2;
+        }
+      }
+    }
   }
 }
