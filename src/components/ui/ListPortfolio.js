@@ -3,7 +3,6 @@ import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import ProjectCard from "./ProjectCard";
@@ -20,7 +19,7 @@ const listPortfolio = [
   {
     title: "Laptop Service Management System",
     description:
-      "Laptop Service Management SystemLaptop Service Management System The Laptop Service Management System is a comprehensive solution designed to help service centers manage repair requests, track repair progress, optimize technician assignments, and maintain customer satisfaction. The system offers seamless integration for managing customer orders and invoicing.",
+      "The Laptop Service Management System is a comprehensive solution designed to help service centers manage repair requests, track repair progress, optimize technician assignments, and maintain customer satisfaction. The system offers seamless integration for managing customer orders and invoicing.",
     imageUrl: "/images/laptop-service.png",
     linkDemo: "https://java-cafe-beta.vercel.app/",
     sourceCode:
@@ -29,7 +28,7 @@ const listPortfolio = [
   {
     title: "Typing Test Game",
     description:
-      "Open Source Typing Test GameOpen Source Typing Test Game Contributed to the open-source typing test game with React and Material-UI (MUI) by adding a data visualization feature to track typing stats. Used Web Workers to track stats in the background, preventing blocking of the main thread, improving performance, and making the app more responsive",
+      "Contributed to the open-source typing test game with React and Material-UI (MUI) by adding a data visualization feature to track typing stats. Used Web Workers to track stats in the background, preventing blocking of the main thread, improving performance, and making the app more responsive",
     imageUrl: "/images/eletypes.png",
     linkDemo: "https://eletypes.com/",
     sourceCode:
