@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
       <Container>
-        <p>  &copy; 2024 Rendi Virgantara Setiawan. All rights reserved.</p>
+        <p> &copy; 2025 Rendi Virgantara Setiawan. All rights reserved.</p>
       </Container>
     </footer>
   );
