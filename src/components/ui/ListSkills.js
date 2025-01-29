@@ -4,25 +4,28 @@ import SkillCard from "./SkillCard";
 
 const listSkills = [
   {
-    text: "HTML",
+    text: "Next.js",
   },
   {
-    text: "CSS",
+    text: "TypeScript",
   },
   {
-    text: "Javascript",
+    text: "Rust",
   },
   {
-    text: "Node Js",
+    text: "Tailwind",
   },
   {
-    text: "Express Js",
+    text: "MUI",
   },
   {
-    text: "React Js",
+    text: "MongoDB",
   },
   {
-    text: "Mongo Db",
+    text: "MySQL",
+  },
+  {
+    text: "Docker",
   },
 ];
 

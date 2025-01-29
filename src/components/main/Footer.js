@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
       <Container>
-        <p>Copyright 2024. By Rendi Virgantara Setiawan</p>
+        <p>  &copy; 2024 Rendi Virgantara Setiawan. All rights reserved.</p>
       </Container>
     </footer>
   );

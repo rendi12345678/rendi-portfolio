@@ -20,6 +20,19 @@
     width: 100%;
     gap: calc(g.$base-size * 2);
 
+    .project-details {
+      .button-container {
+        display: flex;
+        gap: calc(g.$base-size * 2);
+        margin-top: calc(g.$base-size * 2);
+
+        button {
+          color: black;
+          padding: u.rem(10) u.rem(calc(10 * 3));
+        }
+      }
+    }
+
     .item {
       transform: translateX(g.$translate-size-min);
       cursor: grab;

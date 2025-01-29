@@ -1,6 +1,6 @@
 @use "../utils/" as u;
 
-$max-width: u.rem(1100);
+$max-width: u.rem(1200);
 $border-radius: u.rem(12);
 $base-size: u.rem(10);
 $double-base-size: calc($base-size * 2);

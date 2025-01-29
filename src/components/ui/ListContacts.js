@@ -5,25 +5,21 @@ import Title from "./Title";
 
 const listContacts = [
   {
-    type: "location",
-    icon: "/images/location.svg",
-    text: "Prayungan, Gondang Manis, Bandar Kedung Mulyo, Jombang, East Java, Indonesia",
-  },
-  {
     type: "email",
     icon: "/images/mail.svg",
-    text: "hardleberg@gmail.com",
+    text: "rendivirgantarasetiawan123@gmail.com",
   },
   {
-    type: "phone-number",
-    icon: "/images/telephone.svg",
-    text: "+62 857-3330-0369",
+    type: "github",
+    url: "https://github.com/rendi12345678",
+    icon: "/images/github.svg",
+    text: "https://github.com/rendi12345678",
   },
   {
     type: "linkedin",
     url: "https://linkedin.com/in/rendi-virgantara-setiawan-ab24382a9",
     icon: "/images/linkedin.svg",
-    text: "Rendi Virgantara Setiawan",
+    text: "https://linkedin.com/in/rendi-virgantara-setiawan-ab24382a9",
   },
 ];
 

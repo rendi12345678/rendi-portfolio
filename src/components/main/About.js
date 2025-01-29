@@ -24,13 +24,15 @@ function About() {
             className="reveal"
           />
           <p className="reveal">
-            Hello, I'm Rendi Virgantara Setiawan, a passionate web developer
-            based in Indonesia. With a deep passion for coding and calisthenics,
-            I like to build interactive and responsive websites that can look
-            good on different platforms and browsers for business owners. I am
-            dedicated to delivering exceptional results. I create digital
-            experiences that resonate with your audience and propel your brand
-            forward. Let's collaborate to elevate your brand online for success
+            Hello, I'm Rendi Virgantara Setiawan, a Full-Stack Developer
+            specializing in Next.js, TypeScript, Rust, Tailwind CSS, and
+            MongoDB. Currently in my first year of college, I focus on building
+            scalable, maintainable, and high-performance app solutions.
+            Experienced in using Tauri to create cross-device apps for mobile,
+            web, and desktop. Passionate about cybersecurity as a hobby and
+            adopting Web3 technologies. Always eager to collaborate and
+            contribute to innovative projects, while expanding my skills in
+            emerging technologies to create impactful solutions
           </p>
         </div>
       </Container>

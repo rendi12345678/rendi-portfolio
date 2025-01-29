@@ -4,19 +4,19 @@ import ServiceCard from "./ServiceCard";
 
 const listServices = [
   {
-    title: "Custom Website",
+    title: "Custom Web Solutions",
     description:
-      "Crafting customized websites from scratch to meet each client's unique needs, ensuring a personalized online presence",
+      "Providing tailored web solutions, including e-commerce platforms, inventory management systems, and other custom applications to meet unique business needs.",
   },
   {
-    title: "Responsive Website",
+    title: "Website Maintenance",
     description:
-      "Crafting seamless cross-device experiences through responsive design, which utilizes fluid layouts, flexible grids, and media queries",
+      "Ensuring websites remain up-to-date, functional, and optimized with ongoing maintenance and support services.",
   },
   {
-    title: "Website Optimization",
+    title: "Web Security Services",
     description:
-      "Improving website speed and efficiency through optimization techniques, enhancing user satisfaction",
+      "Implementing robust security measures to protect websites from vulnerabilities, ensuring data integrity and safety.",
   },
 ];
 

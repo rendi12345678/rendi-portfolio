@@ -8,30 +8,32 @@ import "swiper/css";
 import "swiper/css/pagination";
 import ProjectCard from "./ProjectCard";
 
-const listPotfolio = [
+const listPortfolio = [
   {
-    title: "Fun Pilpres",
+    title: "Cafe Management System",
     description:
-      "This is my personal project, built with the MERN stack, to allow users to choose presidential candidates based on specific reasons, with user authentication using JWT, and to view the total votes solely for entertainment purposes.",
-    imageUrl: "/images/web-capres.png",
-    linkDemo: "https://fun-pilpres.web.app",
-    hash: "L6B|1?NI4.I900XAIos.B6xr~WR.",
+      "The Cafe Management System is a powerful solution built with Next.js, TypeScript, Tailwind CSS, and MongoDB to help café owners optimize their operations. This system enhances efficiency, improves customer experiences, and drives business growth through seamless order handling, inventory tracking, and marketing automation—all from a single platform.",
+    imageUrl: "/images/cafe-system.png",
+    linkDemo: "https://java-cafe-beta.vercel.app/",
+    sourceCode: "https://github.com/rendi12345678/java-cafe",
   },
   {
-    title: "Nanny's Portfolio",
+    title: "Laptop Service Management System",
     description:
-      "This is my personal project, a nanny landing page built with React.js. The platform offers a user-friendly interface for families to discover and connect with experienced nanny, showcasing essential information such as profiles and contact details.",
-    imageUrl: "/images/nanny-landing-page.png",
-    linkDemo: "https://ningsih-nanny.web.app",
-    hash: "L7BM=A00%M~V00W=f+kCXo~pk84n",
+      "Laptop Service Management SystemLaptop Service Management System The Laptop Service Management System is a comprehensive solution designed to help service centers manage repair requests, track repair progress, optimize technician assignments, and maintain customer satisfaction. The system offers seamless integration for managing customer orders and invoicing.",
+    imageUrl: "/images/laptop-service.png",
+    linkDemo: "https://java-cafe-beta.vercel.app/",
+    sourceCode:
+      " https://github.com/rendi12345678/laptop-service-management-system",
   },
   {
-    title: "Kinemaster Downloader",
+    title: "Typing Test Game",
     description:
-      "This is a Kinemaster downloader built with HTML, CSS, and JavaScript for my friend at school, allowing users to download Kinemaster from my friend's file.",
-    imageUrl: "/images/gembos-site.png",
-    linkDemo: "https://rendi12345678.github.io/sohib-gembos/",
-    hash: "LE8NtkogV?M{4nj?WUWB~pa}ogt7",
+      "Open Source Typing Test GameOpen Source Typing Test Game Contributed to the open-source typing test game with React and Material-UI (MUI) by adding a data visualization feature to track typing stats. Used Web Workers to track stats in the background, preventing blocking of the main thread, improving performance, and making the app more responsive",
+    imageUrl: "/images/eletypes.png",
+    linkDemo: "https://eletypes.com/",
+    sourceCode:
+      "https://github.com/rendi12345678/eletypes-frontendContributed to the open-source typing test game with React and Material-UI (MUI) by adding a data visualization feature to track typing stats. Used Web Workers to track stats in the background, preventing blocking of the main thread, improving performance, and making the app more responsive Link : https://www.eletypes.com/ Source code : https://github.com/rendi12345678/eletypes-frontend",
   },
 ];
 
@@ -54,19 +56,19 @@ function ListPortfolio() {
         },
       }}
     >
-      {listPotfolio.map(
-        ({ title, description, imageUrl, linkDemo, hash }, index) => (
+      {listPortfolio.map(
+        ({ title, description, imageUrl, sourceCode, linkDemo }, index) => (
           <SwiperSlide key={index}>
             <ProjectCard
               title={title}
               description={description}
               imageUrl={imageUrl}
               linkdemo={linkDemo}
-              hash={hash}
               delay={index}
+              sourceCode={sourceCode}
             />
           </SwiperSlide>
-        )
+        ),
       )}
     </Swiper>
   );

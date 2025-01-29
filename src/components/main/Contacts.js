@@ -1,6 +1,7 @@
 import React from "react";
 import ListContacts from "../ui/ListContacts";
 import Maps from "../ui/Maps";
+import CoolImage from "../ui/CoolImage";
 import Container from "./../ui/Container";
 
 function Contacts() {
@@ -9,7 +10,8 @@ function Contacts() {
       <Container>
         <div className="list-contact-and-maps">
           <ListContacts />
-          <Maps />
+          {/* <Maps /> */}
+          <CoolImage />
         </div>
       </Container>
     </section>

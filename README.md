@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Rendi's Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built a personal portfolio website using React and SASS to showcase web development skills and projects. Designed a clean, responsive UI for optimal viewing across different devices, highlighting key achievements and technical expertise.
 
 ## Available Scripts
 

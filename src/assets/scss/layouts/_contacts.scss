@@ -17,7 +17,7 @@
     display: grid;
     align-items: center;
     text-align: left;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: calc(g.$base-size * 2);
     box-sizing: border-box;
 
@@ -28,6 +28,11 @@
       box-sizing: border-box;
       overflow: hidden;
       transform: translateX(g.$translate-size);
+
+      .cool-image {
+        width: 100%;
+        object-fit: contain;
+      }
 
       &-offline {
         width: 100%;

@@ -10,7 +10,7 @@ function ContactCard({ icon, text, delay, type, url }) {
       <div className="icon">
         <img src={icon} alt="Icon" />
       </div>
-      {type === "linkedin" ? <a href={url}>{text}</a> : <p>{text}</p>}
+      {type === "linkedin" || type === "github" ? <a href={url}>{text}</a> : <p>{text}</p>}
     </li>
   );
 }
