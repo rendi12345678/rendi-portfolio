@@ -13,6 +13,10 @@ function ProjectCard({
   const itemRef = useRef();
   useDelay({ ref: itemRef, delay });
 
+  const handleButtonClick = (url) => {
+    window.open(url, "_blank", "noopener noreferrer");
+  };
+
   return (
     <div className="item reveal" ref={itemRef}>
       <figure className="project-image">
@@ -24,18 +28,14 @@ function ProjectCard({
         <p className="project-description">{description}</p>
         <div className="button-container">
           <button
-            href={linkdemo}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => handleButtonClick(linkdemo)}
             className="btn btn-demo"
           >
             Live Demo
           </button>
 
           <button
-            href={sourceCode}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => handleButtonClick(sourceCode)}
             className="btn btn-source"
           >
             Source Code
