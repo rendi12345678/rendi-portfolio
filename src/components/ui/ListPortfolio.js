@@ -21,9 +21,9 @@ const listPortfolio = [
     description:
       "The Laptop Service Management System is a comprehensive solution designed to help service centers manage repair requests, track repair progress, optimize technician assignments, and maintain customer satisfaction. The system offers seamless integration for managing customer orders and invoicing.",
     imageUrl: "/images/laptop-service.png",
-    linkDemo: "https://java-cafe-beta.vercel.app/",
+    linkDemo: "https://laptop-service-management-system.vercel.app/",
     sourceCode:
-      " https://github.com/rendi12345678/laptop-service-management-system",
+      "https://github.com/rendi12345678/laptop-service-management-system",
   },
   {
     title: "Typing Test Game",
@@ -31,8 +31,7 @@ const listPortfolio = [
       "Contributed to the open-source typing test game with React and Material-UI (MUI) by adding a data visualization feature to track typing stats. Used Web Workers to track stats in the background, preventing blocking of the main thread, improving performance, and making the app more responsive",
     imageUrl: "/images/eletypes.png",
     linkDemo: "https://eletypes.com/",
-    sourceCode:
-      "https://github.com/rendi12345678/eletypes-frontendContributed to the open-source typing test game with React and Material-UI (MUI) by adding a data visualization feature to track typing stats. Used Web Workers to track stats in the background, preventing blocking of the main thread, improving performance, and making the app more responsive Link : https://www.eletypes.com/ Source code : https://github.com/rendi12345678/eletypes-frontend",
+    sourceCode: "https://github.com/rendi12345678/eletypes-frontend",
   },
 ];
 
