@@ -13,7 +13,7 @@ function HeroInfo() {
   return (
     <div className="info">
       <h1 className="hero-title reveal">
-        Hey There! <br /> I'm Rendi a <span>Full Stack Web Developer</span>
+        Hi There! <br /> I'm Rendi a <span>Full Stack Web Developer</span>
       </h1>
       <p className="hero-description reveal">
         Let's create a tailored app solution that will streamline and enhance
